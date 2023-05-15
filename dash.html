@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,85 +28,110 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="sweetalert2%4011"></script>
 </head>
-<body class="bg-white-dark relative min-h-screen">
-<header class="sticky top-0 shadow-md z-10">
-    <div class="bg-black" style="display:none;">
-        <div class="2xl:container mx-auto flex items-center justify-between py-1.5 px-2">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow" viewBox="0 0 24 24" width="22" height="22">
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path fill="currentColor" d="M17 16h2V4H9v2h8v10zm0 2v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3zM7 16v2h2v1h2v-1h.5a2.5 2.5 0 1 0 0-5h-3a.5.5 0 1 1 0-1H13v-2h-2V9H9v1h-.5a2.5 2.5 0 1 0 0 5h3a.5.5 0 1 1 0 1H7z"></path>
-                </svg>
-            </div>
-            <ul class="lg:flex text-white text-xs items-center justify-center">
-                <li class="px-4">1 BTC = 11372831 ¦</li>
-                <!--                <li class="px-4">1 BTC = 43641.72 EUR</li>-->
-                <!--                <li class="px-4">1 BTC = 37155.98 GBP</li>-->
-                <!--                <li class="px-4">1 BTC = 3722317.63 INR</li>-->
-                <!--                <li class="px-4">1 BTC = 3651148.70 RUB</li>-->
-            </ul>
-            <div><select class="setcurrency bg-black hover:bg-black-dark focus:bg-black-dark w-24 rounded-sm py-1 px-3 cursor-pointer text-sm text-white border border-white" title="Choose your currency">
-                    <option value="btc" selected="">BTC</option>
-                    <option value="usd">NGN</option>
-                    <!--                    <option value="eur">EUR</option>-->
-                    <!--                    <option value="gbp">GBP</option>-->
-                    <!--                    <option value="inr">INR</option>-->
-                    <!--                    <option value="rub">RUB</option>-->
-                </select></div>
-        </div>
-    </div>
-    <div class="bg-white">
-        <div class="2xl:container mx-auto py-3 xl:py-6 px-2 leading-none relative">
-            <div class="flex items-center justify-between xl:hidden">
-                                <button id="openAccountMenu" class="h-full rounded-br flex justify-start items-center flex-col md:hidden bg-white hover:bg-white-dark text-black shadow-lg px-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0H24V24H0z"></path>
-                        <path fill="currentColor" d="M21 18v2H3v-2h18zM17.404 3.904L22 8.5l-4.596 4.596-1.414-1.414L19.172 8.5 15.99 5.318l1.414-1.414zM12 11v2H3v-2h9zm0-7v2H3V4h9z"></path>
-                    </svg>
-                    <div class="text-black text-xs mt-1">Menu</div>
-                </button>
-                                <a href="/" class="block"><img src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
-                <button class="p-2 rounded-sm hover:bg-white-dark text-black toggle" data-target="mobileMenu" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z"></path>
-                    </svg>
-                </button>
-                <div id="mobileMenu" class="bg-white absolute inset-x-0 top-full shadow-md" hidden="">
-                    <nav class="grid grid-cols-2 gap-2">
 
-                                                                            <ul class="flex flex-col items-start text-black text-sm pl-2 pb-2">
-                                <li class="w-36"><a class="inline-flex w-full items-center py-1.5 px-2 rounded text-white bg-black hover:bg-black-dark" href="/account.php">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-1.5" viewBox="0 0 24 24" width="22" height="22">
+<body class="bg-white-dark relative min-h-screen">
+    <header class="sticky top-0 shadow-md z-10">
+        <div class="bg-black" style="display:none;">
+            <div class="2xl:container mx-auto flex items-center justify-between py-1.5 px-2">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow" viewBox="0 0 24 24" width="22"
+                        height="22">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor"
+                            d="M17 16h2V4H9v2h8v10zm0 2v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3zM7 16v2h2v1h2v-1h.5a2.5 2.5 0 1 0 0-5h-3a.5.5 0 1 1 0-1H13v-2h-2V9H9v1h-.5a2.5 2.5 0 1 0 0 5h3a.5.5 0 1 1 0 1H7z">
+                        </path>
+                    </svg>
+                </div>
+                <ul class="lg:flex text-white text-xs items-center justify-center">
+                    <li class="px-4">1 BTC = 11372831 ï¿½</li>
+                    <!--                <li class="px-4">1 BTC = 43641.72 EUR</li>-->
+                    <!--                <li class="px-4">1 BTC = 37155.98 GBP</li>-->
+                    <!--                <li class="px-4">1 BTC = 3722317.63 INR</li>-->
+                    <!--                <li class="px-4">1 BTC = 3651148.70 RUB</li>-->
+                </ul>
+                <div><select
+                        class="setcurrency bg-black hover:bg-black-dark focus:bg-black-dark w-24 rounded-sm py-1 px-3 cursor-pointer text-sm text-white border border-white"
+                        title="Choose your currency">
+                        <option value="btc" selected="">BTC</option>
+                        <option value="usd">NGN</option>
+                        <!--                    <option value="eur">EUR</option>-->
+                        <!--                    <option value="gbp">GBP</option>-->
+                        <!--                    <option value="inr">INR</option>-->
+                        <!--                    <option value="rub">RUB</option>-->
+                    </select></div>
+            </div>
+        </div>
+        <div class="bg-white">
+            <div class="2xl:container mx-auto py-3 xl:py-6 px-2 leading-none relative">
+                <div class="flex items-center justify-between xl:hidden">
+                    <button id="openAccountMenu"
+                        class="h-full rounded-br flex justify-start items-center flex-col md:hidden bg-white hover:bg-white-dark text-black shadow-lg px-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0H24V24H0z"></path>
+                            <path fill="currentColor"
+                                d="M21 18v2H3v-2h18zM17.404 3.904L22 8.5l-4.596 4.596-1.414-1.414L19.172 8.5 15.99 5.318l1.414-1.414zM12 11v2H3v-2h9zm0-7v2H3V4h9z">
+                            </path>
+                        </svg>
+                        <div class="text-black text-xs mt-1">Menu</div>
+                    </button>
+                    <a href="/" class="block"><img src="images/GRI.png" style="height: 90px;" alt="Logo"></a>
+                    <button class="p-2 rounded-sm hover:bg-white-dark text-black toggle" data-target="mobileMenu"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor" d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z"></path>
+                        </svg>
+                    </button>
+                    <div id="mobileMenu" class="bg-white absolute inset-x-0 top-full shadow-md" hidden="">
+                        <nav class="grid grid-cols-2 gap-2">
+
+                            <ul class="flex flex-col items-start text-black text-sm pl-2 pb-2">
+                                <li class="w-36"><a
+                                        class="inline-flex w-full items-center py-1.5 px-2 rounded text-white bg-black hover:bg-black-dark"
+                                        href="/account.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
                                             <path fill="none" d="M0 0h24v24H0z"></path>
-                                            <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                                            <path fill="currentColor"
+                                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z">
+                                            </path>
                                         </svg>
                                         Dashboard </a></li>
                                 <li class="w-36 mt-0.5">
 
-								<a class="inline-flex w-full items-center py-1.5 px-2 rounded text-black bg-green hover:bg-green-dark" href="/logout.php">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5" viewBox="0 0 24 24" width="22" height="22">
+                                    <a class="inline-flex w-full items-center py-1.5 px-2 rounded text-black bg-green hover:bg-green-dark"
+                                        href="/logout.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5" viewBox="0 0 24 24"
+                                            width="22" height="22">
                                             <path fill="none" d="M0 0h24v24H0z"></path>
-                                            <path fill="currentColor" d="M5 22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3h-2V4H6v16h12v-2h2v3a1 1 0 0 1-1 1H5zm13-6v-3h-7v-2h7V8l5 4-5 4z"></path>
+                                            <path fill="currentColor"
+                                                d="M5 22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3h-2V4H6v16h12v-2h2v3a1 1 0 0 1-1 1H5zm13-6v-3h-7v-2h7V8l5 4-5 4z">
+                                            </path>
                                         </svg>
-                                        Sign out </a></li>
+                                        Sign out </a>
+                                </li>
 
 
                             </ul>
 
 
-                        
-                        <ul class="flex flex-col items-end text-gray text-sm pr-4 pb-2">
-                            <li>
-                                <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold" href="/">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z"></path>
-                                    </svg>
-                                    Home </a></li>
-                           <!-- <li class="mt-0.5"><a
+
+                            <ul class="flex flex-col items-end text-gray text-sm pr-4 pb-2">
+                                <li>
+                                    <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold"
+                                        href="/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z">
+                                            </path>
+                                        </svg>
+                                        Home </a>
+                                </li>
+                                <!-- <li class="mt-0.5"><a
                                         class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
-                                        href="/pricing.php">
+                                        href="/pricing.html">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24"
                                          width="22" height="22">
                                         <path fill="none" d="M0 0h24v24H0z"/>
@@ -111,51 +139,77 @@
                                               d="M13 9h8L11 24v-9H4l9-15v9zm-2 2V7.22L7.532 13H13v4.394L17.263 11H11z"/>
                                     </svg>
                                     Pricing </a></li>-->
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/insights.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
-                                        <path fill="currentColor" d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z"></path>
-                                    </svg>
-                                    Insights </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/about.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                    </svg>
-                                    About </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/faq.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"></path>
-                                    </svg>
-                                    FAQs </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/affiliate.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"></path>
-                                    </svg>
-                                    Affiliate </a></li>
-                        </ul>
-                    </nav>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/payout.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
+                                            <path fill="currentColor"
+                                                d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z">
+                                            </path>
+                                        </svg>
+                                        Insights </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/about.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z">
+                                            </path>
+                                        </svg>
+                                        About </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/faq.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z">
+                                            </path>
+                                        </svg>
+                                        FAQs </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/affiliate.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z">
+                                            </path>
+                                        </svg>
+                                        Affiliate </a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-            <div class="hidden xl:flex items-center">
-                <a href="/" class="block"><img src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light ml-4 mr-2.5" width="22" height="22" viewBox="0 0 29.302 25.519">
-                    <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
-                </svg>
-                <nav>
-                    <ul class="flex text-gray">
-                        <li>
-                            <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold" href="/">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z"></path>
-                                </svg>
-                                Home </a></li>
-                      <!--  <li class="ml-2"><a
+                <div class="hidden xl:flex items-center">
+                    <a href="/" class="block"><img src="images/GRI.png" style="height: 90px;" alt="Logo"></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light ml-4 mr-2.5" width="22" height="22"
+                        viewBox="0 0 29.302 25.519">
+                        <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
+                    </svg>
+                    <nav>
+                        <ul class="flex text-gray">
+                            <li>
+                                <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold"
+                                    href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z">
+                                        </path>
+                                    </svg>
+                                    Home </a>
+                            </li>
+                            <!--  <li class="ml-2"><a
                                     class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
-                                    href="/pricing.php">
+                                    href="/pricing.html">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24"
                                      width="22" height="22">
                                     <path fill="none" d="M0 0h24v24H0z"/>
@@ -163,294 +217,439 @@
                                           d="M13 9h8L11 24v-9H4l9-15v9zm-2 2V7.22L7.532 13H13v4.394L17.263 11H11z"/>
                                 </svg>
                                 Pricing </a></li>-->
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/insights.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
-                                    <path fill="currentColor" d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z"></path>
-                                </svg>
-                                Insights </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/about.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                </svg>
-                                About </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/faq.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"></path>
-                                </svg>
-                                FAQs </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/affiliate.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"></path>
-                                </svg>
-                                Affiliate </a></li>
-                    </ul>
-                </nav>
-                
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/payout.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
+                                        <path fill="currentColor"
+                                            d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z">
+                                        </path>
+                                    </svg>
+                                    Insights </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/about.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z">
+                                        </path>
+                                    </svg>
+                                    About </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/faq.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z">
+                                        </path>
+                                    </svg>
+                                    FAQs </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/affiliate.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z">
+                                        </path>
+                                    </svg>
+                                    Affiliate </a></li>
+                        </ul>
+                    </nav>
 
-                                    <nav class="ml-auto flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light mr-4 ml-2.5" width="22" height="22" viewBox="0 0 29.302 25.519">
-                            <line x1="28" y2="24" transform="translate(0.651 0.759)" fill="none" stroke="currentColor" stroke-width="2"></line>
+
+                    <nav class="ml-auto flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light mr-4 ml-2.5" width="22"
+                            height="22" viewBox="0 0 29.302 25.519">
+                            <line x1="28" y2="24" transform="translate(0.651 0.759)" fill="none" stroke="currentColor"
+                                stroke-width="2"></line>
                         </svg>
-                        <a href="/account.php" class="bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24" width="22" height="22">
+                        <a href="/account.html"
+                            class="bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24"
+                                width="22" height="22">
                                 <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                                <path fill="currentColor"
+                                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z">
+                                </path>
                             </svg>
                             Dashboard </a>
 
-							<a href="/logout.php" class="ml-2 bg-green text-black hover:bg-green-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" viewBox="0 0 24 24" width="22" height="22">
+                        <a href="/logout.html"
+                            class="ml-2 bg-green text-black hover:bg-green-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" viewBox="0 0 24 24" width="22"
+                                height="22">
                                 <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path fill="currentColor" d="M5 22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3h-2V4H6v16h12v-2h2v3a1 1 0 0 1-1 1H5zm13-6v-3h-7v-2h7V8l5 4-5 4z"></path>
+                                <path fill="currentColor"
+                                    d="M5 22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3h-2V4H6v16h12v-2h2v3a1 1 0 0 1-1 1H5zm13-6v-3h-7v-2h7V8l5 4-5 4z">
+                                </path>
                             </svg>
                             Sign out </a>
 
                     </nav>
-                            </div>
-        </div>
-    </div>
-    <script async="" src="js_1"></script>
-    <script> window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'G-7X3CC5H5S2');
-
-    
-    </script>
-</header>
-<style>
-    .comment {
-        border-bottom: 2px dotted #e8e1e1;
-        padding-bottom: 5px;
-        margin-bottom: 5px;
-    }
-    .swal2-html-container{
-        margin: 15px;
-        margin-bottom: 0;
-    }
-    .swal2-confirm{
-        background: #004346 !important;
-    }
-    .font-semibold{margin: 0;}
-</style>
-<div class="account-menu flex flex-row w-full">
-
-    
-<div id="accountMenu" class="z-10 fixed h-full md:static hidden md:block w-56 md:w-72 bg-white py-14 px-3 md:px-8 shadow-2xl md:shadow-none">
-    <button id="closeAccountMenu" class="inline-block absolute top-3 right-3 md:hidden p-1.5 p-2 rounded-sm hover:bg-white-dark text-black">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"></path></svg>
-    </button>
-    <ul>
-        <li>
-            <a class="flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold" href="/account.php">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-green mr-3" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
-                Dashboard </a></li>
-        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/recharge.php">
-                <svg class="text-green mr-3" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 128 128" style="fill: #26e07f;"><path d="M 24 1 C 11.32 1 1 11.32 1 24 L 1 84 C 1 96.68 11.32 107 24 107 L 78 107 C 79.66 107 81 105.66 81 104 C 81 102.34 79.66 101 78 101 L 24 101 C 14.63 101 7 93.37 7 84 L 7 47 L 121 47 L 121 66 C 121 67.66 122.34 69 124 69 C 125.66 69 127 67.66 127 66 L 127 24 C 127 11.32 116.68 1 104 1 L 24 1 z M 24 7 L 104 7 C 112.35 7 119.3007 13.05 120.7207 21 L 7.2792969 21 C 8.6992969 13.05 15.65 7 24 7 z M 7 27 L 121 27 L 121 41 L 7 41 L 7 27 z M 92 61 C 90.34 61 89 62.34 89 64 L 89 71 L 86 71 C 84.34 71 83 72.34 83 74 C 83 75.66 84.34 77 86 77 L 89 77 L 89 111 L 86 111 C 84.34 111 83 112.34 83 114 C 83 115.66 84.34 117 86 117 L 89 117 L 89 124 C 89 125.66 90.34 127 92 127 C 93.66 127 95 125.66 95 124 L 95 117 L 103 117 L 103 124 C 103 125.66 104.34 127 106 127 C 107.66 127 109 125.66 109 124 L 109 117 L 114 117 C 121.17 117 127 111.17 127 104 C 127 98.37 123.40062 93.589297 118.39062 91.779297 C 120.02062 89.609297 121 86.92 121 84 C 121 77.17 115.7 71.560781 109 71.050781 L 109 64 C 109 62.34 107.66 61 106 61 C 104.34 61 103 62.34 103 64 L 103 71 L 95 71 L 95 64 C 95 62.34 93.66 61 92 61 z M 95 77 L 108 77 C 111.86 77 115 80.14 115 84 C 115 87.86 111.86 91 108 91 L 95 91 L 95 77 z M 19 81 C 17.34 81 16 82.34 16 84 C 16 85.66 17.34 87 19 87 L 49 87 C 50.66 87 52 85.66 52 84 C 52 82.34 50.66 81 49 81 L 19 81 z M 69 81 C 67.34 81 66 82.34 66 84 C 66 85.66 67.34 87 69 87 L 79 87 C 80.66 87 82 85.66 82 84 C 82 82.34 80.66 81 79 81 L 69 81 z M 95 97 L 108 97 L 114 97 C 117.86 97 121 100.14 121 104 C 121 107.86 117.86 111 114 111 L 95 111 L 95 97 z"></path></svg>
-                Invest </a></li>
-        <!--<li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "-->
-        <!--       href="/manager.php">-->
-        <!--        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-green mr-3 bi inline-block bi-award-fill" viewBox="0 0 16 16"><path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/><path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/></svg>-->
-        <!--        account Manager </a></li>-->
-                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/loan.php">
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z"></path></svg>
-                loan </a></li>
-        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/payout.php">
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z"></path></svg>
-                Withdrawals </a></li>
-        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/referrals.php">
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z"></path></svg>
-                Earn commission </a></li>
-        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/contact_us.php">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
-                </svg>
-                Contact us </a></li>
-<!--        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black"-->
-<!--               href="--><!--" target="_blank">-->
-<!--                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3"  viewBox="0 0 24 24" width="24" height="24">-->
-<!--                    <path fill="none" d="M0 0h24v24H0z"></path>-->
-<!--                    <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>-->
-<!--                </svg>-->
-<!--                --><!-- </a></li>-->
-        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/setting.php">
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M3.34 17a10.018 10.018 0 0 1-.978-2.326 3 3 0 0 0 .002-5.347A9.99 9.99 0 0 1 4.865 4.99a3 3 0 0 0 4.631-2.674 9.99 9.99 0 0 1 5.007.002 3 3 0 0 0 4.632 2.672c.579.59 1.093 1.261 1.525 2.01.433.749.757 1.53.978 2.326a3 3 0 0 0-.002 5.347 9.99 9.99 0 0 1-2.501 4.337 3 3 0 0 0-4.631 2.674 9.99 9.99 0 0 1-5.007-.002 3 3 0 0 0-4.632-2.672A10.018 10.018 0 0 1 3.34 17zm5.66.196a4.993 4.993 0 0 1 2.25 2.77c.499.047 1 .048 1.499.001A4.993 4.993 0 0 1 15 17.197a4.993 4.993 0 0 1 3.525-.565c.29-.408.54-.843.748-1.298A4.993 4.993 0 0 1 18 12c0-1.26.47-2.437 1.273-3.334a8.126 8.126 0 0 0-.75-1.298A4.993 4.993 0 0 1 15 6.804a4.993 4.993 0 0 1-2.25-2.77c-.499-.047-1-.048-1.499-.001A4.993 4.993 0 0 1 9 6.803a4.993 4.993 0 0 1-3.525.565 7.99 7.99 0 0 0-.748 1.298A4.993 4.993 0 0 1 6 12c0 1.26-.47 2.437-1.273 3.334a8.126 8.126 0 0 0 .75 1.298A4.993 4.993 0 0 1 9 17.196zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path></svg>
-                Settings </a></li>
-    </ul>
-</div>
-<script> function toggleAccountMenu() {
-        var accountMenu = document.getElementById('accountMenu');
-        accountMenu.classList.toggle('hidden');
-    }
-
-    var openAccountMenu = document.getElementById('openAccountMenu');
-    openAccountMenu.addEventListener('click', toggleAccountMenu);
-    var closeAccountMenu = document.getElementById('closeAccountMenu');
-    closeAccountMenu.addEventListener('click', toggleAccountMenu);</script>    <div class="flex-1 overflow-y-auto">
-        <div class="xl:container mx-auto py-4 md:py-14 px-4 md:px-8"><h1 class="text-black font-bold text-3xl leading-none mb-8 pb-4 border-b-2 border-gray-light">Dashboard</h1>
-            <div class="rounded-2xl bg-white shadow-xl px-8 md:px-10 py-8 mb-12 md:py-10 grid grid-cols-1 lg:grid-cols-3 gap-4">
-                <div class="flex items-center ">
-                    <div class="flex-none">
-                        <a href="/setting.php" class="label">
-                            <img id="avatar" width="56" class="rounded-full" src="fonts/avatar.svg" alt="">
-                        </a>
-                    </div>
-                    <div class="ml-3">
-                        <span class="text-black font-medium leading-none">Hello</span>
-                        <span class="mx-4 text-black text-xl mb-2 font-medium leading-none"><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="deb1b3bfbdefe8e9ee9eb9b3bfb7b2f0bdb1b3">[email&nbsp;protected]</a></span>
-
-                        <h2 class="mt-1 text-warn font-medium leading-none">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="mx-1 bi bi-shield-fill-x" viewBox="0 0 1024 1024" style="display: inline-block;"><path d="M375.36 579.264L147.84 533.888 263.744 870.4h500.864l115.904-336.512-227.84 45.44-137.728-286.784-139.52 286.72z m166.4-361.216c6.4-7.04 9.92-16.192 9.92-26.048 0-21.184-16.832-38.4-37.504-38.4a37.952 37.952 0 0 0-37.44 38.4 38.4 38.4 0 0 0 9.856 26.048l0.512 0.512 27.264 29.76 27.328-30.272zM389.184 192c0-70.72 55.936-128 124.928-128 68.992 0 124.928 57.28 124.928 128a129.28 129.28 0 0 1-33.28 86.912l95.744 199.424 248-49.472 42.496 50.432L823.68 960H204.416L36.352 479.36l42.496-50.56 247.936 49.536 96.64-198.4A129.28 129.28 0 0 1 389.248 192z m-62.464 588.8v-89.6h374.784v89.6H326.784z" p-id="2825"></path></svg>
-                            VIP 1</h2>
-                        <h2 class="text-black mt-1">Balance Amount : 0.00036196 BTC</h2>
-                        <h2>(4116 ¦)</h2>
-                    </div>
-                </div>
-                <div class="flex flex-col md:flex-row items-center md:col-span-2"><img src="images/btc.gif" width="110" height="auto" alt="Whatsminer 30S">
-                    <div class="ml-3 mt-2"><span class="text-black font-medium leading-none">Your Daily interest rate:</span>
-                        <span class="text-black text-xl mb-2 font-medium leading-none text-warn"> 3%</span>
-
-                        <div class="grid grid-cols-2 mt-2 gap-4 items-center">
-                            <div class="uppercase text-xs text-gray">Earn Commission:</div>
-                            <div class="text-right text-xs unitprice text-green-dark">0.00000000 BTC</div>
-                        </div>
-                        <div class="items-center">
-                            <a href="/payout.php" class="mt-3 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-3" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z"></path></svg>
-                                Withdrawals </a>
-                        </div>
-                        <div class="items-center">
-                            <a href="/recharge.php" class="mt-3 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-3" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z"></path></svg>
-                                Invest </a>
-                        </div>
-                    </div>
                 </div>
             </div>
-            <h2 class="text-black font-bold text-2xl leading-none mb-6">User investment on our platform</h2>
-            <div class="mb-8">
-                <div class="2xl:pl-8 mb-8">
-                    <div class="py-4 sm:py-6 pl-4 flex items-center bg-black rounded shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" class="text-green mr-3 flex-none bi bi-credit-card-2-back-fill" viewBox="0 0 24 24">
-                            <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5H0V4zm11.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2zM0 11v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1H0z"></path>
+        </div>
+        <script async="" src="js_1"></script>
+        <script> window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', 'G-7X3CC5H5S2');
+
+
+        </script>
+    </header>
+    <style>
+        .comment {
+            border-bottom: 2px dotted #e8e1e1;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+        }
+
+        .swal2-html-container {
+            margin: 15px;
+            margin-bottom: 0;
+        }
+
+        .swal2-confirm {
+            background: #004346 !important;
+        }
+
+        .font-semibold {
+            margin: 0;
+        }
+    </style>
+    <div class="account-menu flex flex-row w-full">
+
+
+        <div id="accountMenu"
+            class="z-10 fixed h-full md:static hidden md:block w-56 md:w-72 bg-white py-14 px-3 md:px-8 shadow-2xl md:shadow-none">
+            <button id="closeAccountMenu"
+                class="inline-block absolute top-3 right-3 md:hidden p-1.5 p-2 rounded-sm hover:bg-white-dark text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor"
+                        d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z">
+                    </path>
+                </svg>
+            </button>
+            <ul>
+                <li>
+                    <a class="flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold"
+                        href="/account.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-green mr-3" width="24"
+                            height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z">
+                            </path>
                         </svg>
-                        <div><h2 class="text-green font-medium text-sm leading-none mb-1">Total withdrawals</h2>
-                            <div class="text-base sm:text-xl text-white font-semibold leading-none">
-                                971.3882&nbsp; BTC
+                        Dashboard </a>
+                </li>
+                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "
+                        href="/invest.html">
+                        <svg class="text-green mr-3" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                            height="24" viewBox="0 0 128 128" style="fill: #26e07f;">
+                            <path
+                                d="M 24 1 C 11.32 1 1 11.32 1 24 L 1 84 C 1 96.68 11.32 107 24 107 L 78 107 C 79.66 107 81 105.66 81 104 C 81 102.34 79.66 101 78 101 L 24 101 C 14.63 101 7 93.37 7 84 L 7 47 L 121 47 L 121 66 C 121 67.66 122.34 69 124 69 C 125.66 69 127 67.66 127 66 L 127 24 C 127 11.32 116.68 1 104 1 L 24 1 z M 24 7 L 104 7 C 112.35 7 119.3007 13.05 120.7207 21 L 7.2792969 21 C 8.6992969 13.05 15.65 7 24 7 z M 7 27 L 121 27 L 121 41 L 7 41 L 7 27 z M 92 61 C 90.34 61 89 62.34 89 64 L 89 71 L 86 71 C 84.34 71 83 72.34 83 74 C 83 75.66 84.34 77 86 77 L 89 77 L 89 111 L 86 111 C 84.34 111 83 112.34 83 114 C 83 115.66 84.34 117 86 117 L 89 117 L 89 124 C 89 125.66 90.34 127 92 127 C 93.66 127 95 125.66 95 124 L 95 117 L 103 117 L 103 124 C 103 125.66 104.34 127 106 127 C 107.66 127 109 125.66 109 124 L 109 117 L 114 117 C 121.17 117 127 111.17 127 104 C 127 98.37 123.40062 93.589297 118.39062 91.779297 C 120.02062 89.609297 121 86.92 121 84 C 121 77.17 115.7 71.560781 109 71.050781 L 109 64 C 109 62.34 107.66 61 106 61 C 104.34 61 103 62.34 103 64 L 103 71 L 95 71 L 95 64 C 95 62.34 93.66 61 92 61 z M 95 77 L 108 77 C 111.86 77 115 80.14 115 84 C 115 87.86 111.86 91 108 91 L 95 91 L 95 77 z M 19 81 C 17.34 81 16 82.34 16 84 C 16 85.66 17.34 87 19 87 L 49 87 C 50.66 87 52 85.66 52 84 C 52 82.34 50.66 81 49 81 L 19 81 z M 69 81 C 67.34 81 66 82.34 66 84 C 66 85.66 67.34 87 69 87 L 79 87 C 80.66 87 82 85.66 82 84 C 82 82.34 80.66 81 79 81 L 69 81 z M 95 97 L 108 97 L 114 97 C 117.86 97 121 100.14 121 104 C 121 107.86 117.86 111 114 111 L 95 111 L 95 97 z">
+                            </path>
+                        </svg>
+                        Invest </a></li>
+                <!--<li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "-->
+                <!--       href="/manager.html">-->
+                <!--        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-green mr-3 bi inline-block bi-award-fill" viewBox="0 0 16 16"><path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/><path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/></svg>-->
+                <!--        account Manager </a></li>-->
+                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "
+                        href="/recharge.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24"
+                            height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z">
+                            </path>
+                        </svg>
+                        Withdraw </a></li>
+                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "
+                        href="/referrals.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24"
+                            height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z">
+                            </path>
+                        </svg>
+                        Earn commission </a></li>
+                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "
+                        href="/contact.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green mr-3" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">
+                            </path>
+                        </svg>
+                        Contact us </a></li>
+                <!--        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black"-->
+                <!--               href="--><!--" target="_blank">-->
+                <!--                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3"  viewBox="0 0 24 24" width="24" height="24">-->
+                <!--                    <path fill="none" d="M0 0h24v24H0z"></path>-->
+                <!--                    <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>-->
+                <!--                </svg>-->
+                <!--                --><!-- </a></li>-->
+                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "
+                        href="/setting.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24"
+                            height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M3.34 17a10.018 10.018 0 0 1-.978-2.326 3 3 0 0 0 .002-5.347A9.99 9.99 0 0 1 4.865 4.99a3 3 0 0 0 4.631-2.674 9.99 9.99 0 0 1 5.007.002 3 3 0 0 0 4.632 2.672c.579.59 1.093 1.261 1.525 2.01.433.749.757 1.53.978 2.326a3 3 0 0 0-.002 5.347 9.99 9.99 0 0 1-2.501 4.337 3 3 0 0 0-4.631 2.674 9.99 9.99 0 0 1-5.007-.002 3 3 0 0 0-4.632-2.672A10.018 10.018 0 0 1 3.34 17zm5.66.196a4.993 4.993 0 0 1 2.25 2.77c.499.047 1 .048 1.499.001A4.993 4.993 0 0 1 15 17.197a4.993 4.993 0 0 1 3.525-.565c.29-.408.54-.843.748-1.298A4.993 4.993 0 0 1 18 12c0-1.26.47-2.437 1.273-3.334a8.126 8.126 0 0 0-.75-1.298A4.993 4.993 0 0 1 15 6.804a4.993 4.993 0 0 1-2.25-2.77c-.499-.047-1-.048-1.499-.001A4.993 4.993 0 0 1 9 6.803a4.993 4.993 0 0 1-3.525.565 7.99 7.99 0 0 0-.748 1.298A4.993 4.993 0 0 1 6 12c0 1.26-.47 2.437-1.273 3.334a8.126 8.126 0 0 0 .75 1.298A4.993 4.993 0 0 1 9 17.196zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+                            </path>
+                        </svg>
+                        Settings </a></li>
+            </ul>
+        </div>
+        <script> function toggleAccountMenu() {
+                var accountMenu = document.getElementById('accountMenu');
+                accountMenu.classList.toggle('hidden');
+            }
+
+            var openAccountMenu = document.getElementById('openAccountMenu');
+            openAccountMenu.addEventListener('click', toggleAccountMenu);
+            var closeAccountMenu = document.getElementById('closeAccountMenu');
+            closeAccountMenu.addEventListener('click', toggleAccountMenu);</script>
+        <div class="flex-1 overflow-y-auto">
+            <div class="xl:container mx-auto py-4 md:py-14 px-4 md:px-8">
+                <h1 class="text-black font-bold text-3xl leading-none mb-8 pb-4 border-b-2 border-gray-light">Dashboard
+                </h1>
+                <div
+                    class="rounded-2xl bg-white shadow-xl px-8 md:px-10 py-8 mb-12 md:py-10 grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <div class="flex items-center ">
+                        <div class="flex-none">
+                            <a href="/setting.html" class="label">
+                                <img id="avatar" width="56" class="rounded-full" src="fonts/avatar.svg" alt="">
+                            </a>
+                        </div>
+                        <div class="ml-3">
+                            <span class="text-black font-medium leading-none">Hello</span>
+                            <span class="mx-4 text-black text-xl mb-2 font-medium leading-none">Emmanuel</a></span>
+
+                            <h2 class="mt-1 text-warn font-medium leading-none">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="mx-1 bi bi-shield-fill-x" viewBox="0 0 1024 1024"
+                                    style="display: inline-block;">
+                                    <path
+                                        d="M375.36 579.264L147.84 533.888 263.744 870.4h500.864l115.904-336.512-227.84 45.44-137.728-286.784-139.52 286.72z m166.4-361.216c6.4-7.04 9.92-16.192 9.92-26.048 0-21.184-16.832-38.4-37.504-38.4a37.952 37.952 0 0 0-37.44 38.4 38.4 38.4 0 0 0 9.856 26.048l0.512 0.512 27.264 29.76 27.328-30.272zM389.184 192c0-70.72 55.936-128 124.928-128 68.992 0 124.928 57.28 124.928 128a129.28 129.28 0 0 1-33.28 86.912l95.744 199.424 248-49.472 42.496 50.432L823.68 960H204.416L36.352 479.36l42.496-50.56 247.936 49.536 96.64-198.4A129.28 129.28 0 0 1 389.248 192z m-62.464 588.8v-89.6h374.784v89.6H326.784z"
+                                        p-id="2825"></path>
+                                </svg>
+                                VIP 1
+                            </h2>
+                            <h2 class="text-black mt-1">Balance Amount : <b>NGN30,000</b></h2>
+                            <!-- <h2>(4116 ï¿½)</h2> -->
+                        </div>
+                    </div>
+                    <!-- <div class="flex flex-col md:flex-row items-center md:col-span-2">
+                        <div class="ml-3 mt-2"><span class="text-black font-medium leading-none">Your Daily interest
+                                rate:</span>
+                            <span class="text-black text-xl mb-2 font-medium leading-none text-warn"> 3%</span>
+
+                            <div class="grid grid-cols-2 mt-2 gap-4 items-center">
+                                <div class="uppercase text-xs text-gray">Earn Commission:</div>
+                                <div class="text-right text-xs unitprice text-green-dark">NGN30,000</div>
+                            </div>
+                            <div class="items-center">
+                                <a href="/recharge.html"
+                                    class="mt-3 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-3" viewBox="0 0 24 24"
+                                        width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z">
+                                        </path>
+                                    </svg>
+                                    Withdraw</a>
+                            </div>
+                            <div class="items-center">
+                                <a href="/recharge.html"
+                                    class="mt-3 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-3" viewBox="0 0 24 24"
+                                        width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z">
+                                        </path>
+                                    </svg>
+                                    Invest </a>
+                            </div>
+                        </div>
+                    </div> -->
+                </div>
+                <h2 class="text-black font-bold text-2xl leading-none mb-6">User investment on our platform</h2>
+                <div class="mb-8">
+                    <div class="2xl:pl-8 mb-8">
+                        <div class="py-4 sm:py-6 pl-4 flex items-center bg-black rounded shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor"
+                                class="text-green mr-3 flex-none bi bi-credit-card-2-back-fill" viewBox="0 0 24 24">
+                                <path
+                                    d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v5H0V4zm11.5 1a.5.5 0 0 0-.5.5v1a.5.5 0 0 0 .5.5h2a.5.5 0 0 0 .5-.5v-1a.5.5 0 0 0-.5-.5h-2zM0 11v1a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-1H0z">
+                                </path>
+                            </svg>
+                            <div>
+                                <h2 class="text-green font-medium text-sm leading-none mb-1">Potential Earnings</h2>
+                                <div class="text-base sm:text-xl text-white font-semibold leading-none">
+                                    NGN120,000
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4 sm:py-6 pl-4 border-b-2 border-gray-light flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3 flex-none"
+                                viewBox="0 0 24 24" width="32" height="32">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-4H8V8h3V6h2v2h1a2.5 2.5 0 0 1 2 4 2.5 2.5 0 0 1-2 4h-1v2h-2v-2zm-1-3v1h4a.5.5 0 1 0 0-1h-4zm0-3v1h4a.5.5 0 1 0 0-1h-4z">
+                                </path>
+                            </svg>
+                            <div>
+                                <h2 class="text-black font-medium text-sm leading-none mb-1">Total Referred Users</h2>
+                                <div class="text-base sm:text-xl text-green-dark font-semibold leading-none">
+                                    4
+                                </div>
+                            </div>
+                            <!--                        <a href="/top.html" class="ml-4 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">-->
+                            <!--                            --><!-- >> </a>-->
+                        </div>
+
+                    </div>
+
+                    <h2 class="text-black font-bold text-2xl leading-none mb-2">VIP level requirements and benefits</h2>
+                    <div
+                        class="rounded-2xl bg-white shadow-xl p-4 md:p-10 max-w-md lg:max-w-screen-lg grid grid-cols-1 lg:bg-gift bg-right bg-cover sm:bg-contain bg-no-repeat">
+                        <div class="lg:col-span-3 lg:pl-6 lg:border-l lg:border-gray-light">
+                            <div class="grid grid-cols-3 gap-2 items-center mb-1.5 border-b border-gray-light">
+                                <div class="font-medium text-center text-sm text-black font-black"> Level</div>
+                                <div class="text-black text-center font-black">Investment amount</div>
+                                <div class="text-sm text-center lg:text-base text-black font-black">Earnings
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
+                                <div class="font-medium text-center text-sm text-black">VIP 1</div>
+                                <div class="text-green text-center">5,000</div>
+                                <div class="font-semibold text-sm lg:text-base text-center text-warn">20,000</div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
+                                <div class="font-medium text-center text-sm text-black">VIP 2</div>
+                                <div class="text-green text-center">10,000</div>
+                                <div class="font-semibold text-sm lg:text-base text-center text-warn">40,000</div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
+                                <div class="font-medium text-center text-sm text-black">VIP 3</div>
+                                <div class="text-green text-center">15,000</div>
+                                <div class="font-semibold text-sm lg:text-base text-center text-warn">60,000</div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
+                                <div class="font-medium text-center text-sm text-black">VIP 4</div>
+                                <div class="text-green text-center">20,000</div>
+                                <div class="font-semibold text-sm lg:text-base text-center text-warn">80,000</div>
+                            </div>
+                            <!-- <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
+                                <div class="font-medium text-center text-sm text-black">VIP 5</div>
+                                <div class="text-green text-center">0.5-1 BTC</div>
+                                <div class="font-semibold text-sm lg:text-base text-center text-warn">7%</div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
+                                <div class="font-medium text-center text-sm text-black">VIP 6</div>
+                                <div class="text-green text-center">1-2 BTC</div>
+                                <div class="font-semibold text-sm lg:text-base text-center text-warn">8%</div>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 items-center mb-4 pb-4 border-b border-gray-light">
+                                <div class="font-medium text-center text-sm text-black">VIP 7</div>
+                                <div class="text-green text-center">&gt;2 BTC</div>
+                                <div class="font-semibold text-sm lg:text-base text-center text-warn">10%</div>
+                            </div> -->
+                            <div>
+                                <a href="/recharge.html"
+                                    class="mt-3 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-3" viewBox="0 0 24 24"
+                                        width="24" height="24">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z">
+                                        </path>
+                                    </svg>
+                                    Invest now </a>
                             </div>
                         </div>
                     </div>
-                    <div class="py-4 sm:py-6 pl-4 border-b-2 border-gray-light flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3 flex-none" viewBox="0 0 24 24" width="32" height="32">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-4H8V8h3V6h2v2h1a2.5 2.5 0 0 1 2 4 2.5 2.5 0 0 1-2 4h-1v2h-2v-2zm-1-3v1h4a.5.5 0 1 0 0-1h-4zm0-3v1h4a.5.5 0 1 0 0-1h-4z"></path>
-                        </svg>
-                        <div><h2 class="text-black font-medium text-sm leading-none mb-1">Total investment</h2>
-                            <div class="text-base sm:text-xl text-green-dark font-semibold leading-none">
-                                1045.9498&nbsp; BTC
-                            </div>
+
+                    <div class="lg:col-span-3 lg:pl-8 mt-8">
+                        <h2 class="text-black font-medium text-sm leading-none ml-9 mb-3">
+                            Referral link</h2>
+                        <div class="max-w-sm flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-4" viewBox="0 0 24 24"
+                                width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M13.06 8.11l1.415 1.415a7 7 0 0 1 0 9.9l-.354.353a7 7 0 0 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415 1.415-1.414zm6.718 6.011l-1.414-1.414a5 5 0 1 0-7.071-7.071l-.354.354a5 5 0 0 0 0 7.07l1.415 1.415-1.415 1.414-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 0 1 9.9 9.9z">
+                                </path>
+                            </svg>
+                            <input id="reflink"
+                                class="text-black block bg-white shadow-md rounded px-3 py-1.5 w-full placeholder-green"
+                                type="text" onclick="copyValue('reflink')"
+                                value="https://biticonsbank.com/3966708785892226202304251559" readonly="">
                         </div>
-<!--                        <a href="/top.php" class="ml-4 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">-->
-<!--                            --><!-- >> </a>-->
+                        <a href="/referrals.html"
+                            class="mt-3 mb-8 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24"
+                                width="22" height="22">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z">
+                                </path>
+                            </svg>
+                            Partnering </a>
+                        <!-- <h2 class="text-black font-medium text-sm leading-none mb-3 ml-9">Payment info</h2>
+                        <div class="max-w-sm flex items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-4" viewBox="0 0 24 24"
+                                width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M16 17v-1h-3v-3h3v2h2v2h-1v2h-2v2h-2v-3h2v-1h1zm5 4h-4v-2h2v-2h2v4zM3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zM6 6h2v2H6V6zm0 10h2v2H6v-2zM16 6h2v2h-2V6z">
+                                </path>
+                            </svg>
+                            <input
+                                class="text-black block bg-white shadow-md rounded px-3 py-1.5 w-full placeholder-green"
+                                type="text" value="" id="btcval" onclick="copyValue('btcval')"
+                                placeholder="Add Bitcoin address in settings" readonly="">
+                        </div> -->
+                        <!-- <a href="/setting.html"
+                            class="mt-3 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24"
+                                width="22" height="22">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M3.34 17a10.018 10.018 0 0 1-.978-2.326 3 3 0 0 0 .002-5.347A9.99 9.99 0 0 1 4.865 4.99a3 3 0 0 0 4.631-2.674 9.99 9.99 0 0 1 5.007.002 3 3 0 0 0 4.632 2.672c.579.59 1.093 1.261 1.525 2.01.433.749.757 1.53.978 2.326a3 3 0 0 0-.002 5.347 9.99 9.99 0 0 1-2.501 4.337 3 3 0 0 0-4.631 2.674 9.99 9.99 0 0 1-5.007-.002 3 3 0 0 0-4.632-2.672A10.018 10.018 0 0 1 3.34 17zm5.66.196a4.993 4.993 0 0 1 2.25 2.77c.499.047 1 .048 1.499.001A4.993 4.993 0 0 1 15 17.197a4.993 4.993 0 0 1 3.525-.565c.29-.408.54-.843.748-1.298A4.993 4.993 0 0 1 18 12c0-1.26.47-2.437 1.273-3.334a8.126 8.126 0 0 0-.75-1.298A4.993 4.993 0 0 1 15 6.804a4.993 4.993 0 0 1-2.25-2.77c-.499-.047-1-.048-1.499-.001A4.993 4.993 0 0 1 9 6.803a4.993 4.993 0 0 1-3.525.565 7.99 7.99 0 0 0-.748 1.298A4.993 4.993 0 0 1 6 12c0 1.26-.47 2.437-1.273 3.334a8.126 8.126 0 0 0 .75 1.298A4.993 4.993 0 0 1 9 17.196zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+                                </path>
+                            </svg>
+                            Update </a> -->
                     </div>
 
-                </div>
+                    <div>
 
-                <h2 class="text-black font-bold text-2xl leading-none mb-2">VIP level requirements and benefits</h2>
-                <div class="rounded-2xl bg-white shadow-xl p-4 md:p-10 max-w-md lg:max-w-screen-lg grid grid-cols-1 lg:bg-gift bg-right bg-cover sm:bg-contain bg-no-repeat">
-                    <div class="lg:col-span-3 lg:pl-6 lg:border-l lg:border-gray-light">
-                        <div class="grid grid-cols-3 gap-2 items-center mb-1.5 border-b border-gray-light">
-                            <div class="font-medium text-center text-sm text-black font-black"> Level</div>
-                            <div class="text-black text-center font-black">Investment amount</div>
-                            <div class="text-sm text-center lg:text-base text-black font-black">Daily interest rate</div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
-                            <div class="font-medium text-center text-sm text-black">VIP 1</div>
-                            <div class="text-green text-center">&lt;0.01 BTC</div>
-                            <div class="font-semibold text-sm lg:text-base text-center text-warn">3%</div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
-                            <div class="font-medium text-center text-sm text-black">VIP 2</div>
-                            <div class="text-green text-center">0.01-0.04 BTC</div>
-                            <div class="font-semibold text-sm lg:text-base text-center text-warn">4%</div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
-                            <div class="font-medium text-center text-sm text-black">VIP 3</div>
-                            <div class="text-green text-center">0.04-0.1 BTC</div>
-                            <div class="font-semibold text-sm lg:text-base text-center text-warn">5%</div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
-                            <div class="font-medium text-center text-sm text-black">VIP 4</div>
-                            <div class="text-green text-center">0.1-0.5 BTC</div>
-                            <div class="font-semibold text-sm lg:text-base text-center text-warn">6%</div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
-                            <div class="font-medium text-center text-sm text-black">VIP 5</div>
-                            <div class="text-green text-center">0.5-1 BTC</div>
-                            <div class="font-semibold text-sm lg:text-base text-center text-warn">7%</div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2 items-center mb-1.5">
-                            <div class="font-medium text-center text-sm text-black">VIP 6</div>
-                            <div class="text-green text-center">1-2 BTC</div>
-                            <div class="font-semibold text-sm lg:text-base text-center text-warn">8%</div>
-                        </div>
-                        <div class="grid grid-cols-3 gap-2 items-center mb-4 pb-4 border-b border-gray-light">
-                            <div class="font-medium text-center text-sm text-black">VIP 7</div>
-                            <div class="text-green text-center">&gt;2 BTC</div>
-                            <div class="font-semibold text-sm lg:text-base text-center text-warn">10%</div>
-                        </div>
-                        <div>
-                            <a href="/recharge.php" class="mt-3 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-3" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z"></path></svg>
-                                Invest now </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-3 lg:pl-8 mt-8"><h2 class="text-black font-medium text-sm leading-none ml-9 mb-3">
-                        Referral link</h2>
-                    <div class="max-w-sm flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-4" viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M13.06 8.11l1.415 1.415a7 7 0 0 1 0 9.9l-.354.353a7 7 0 0 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415 1.415-1.414zm6.718 6.011l-1.414-1.414a5 5 0 1 0-7.071-7.071l-.354.354a5 5 0 0 0 0 7.07l1.415 1.415-1.415 1.414-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 0 1 9.9 9.9z"></path>
-                        </svg>
-                        <input id="reflink" class="text-black block bg-white shadow-md rounded px-3 py-1.5 w-full placeholder-green" type="text" onclick="copyValue('reflink')" value="https://biticonsbank.com/3966708785892226202304251559" readonly="">
-                    </div>
-                    <a href="/referrals.php" class="mt-3 mb-8 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24" width="22" height="22">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z"></path>
-                        </svg>
-                        Partnering </a>
-                    <h2 class="text-black font-medium text-sm leading-none mb-3 ml-9">Payment info</h2>
-                    <div class="max-w-sm flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-4" viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M16 17v-1h-3v-3h3v2h2v2h-1v2h-2v2h-2v-3h2v-1h1zm5 4h-4v-2h2v-2h2v4zM3 3h8v8H3V3zm2 2v4h4V5H5zm8-2h8v8h-8V3zm2 2v4h4V5h-4zM3 13h8v8H3v-8zm2 2v4h4v-4H5zm13-2h3v2h-3v-2zM6 6h2v2H6V6zm0 10h2v2H6v-2zM16 6h2v2h-2V6z"></path>
-                        </svg>
-                        <input class="text-black block bg-white shadow-md rounded px-3 py-1.5 w-full placeholder-green" type="text" value="" id="btcval" onclick="copyValue('btcval')" placeholder="Add Bitcoin address in settings" readonly=""></div>
-                    <a href="/setting.php" class="mt-3 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24" width="22" height="22">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M3.34 17a10.018 10.018 0 0 1-.978-2.326 3 3 0 0 0 .002-5.347A9.99 9.99 0 0 1 4.865 4.99a3 3 0 0 0 4.631-2.674 9.99 9.99 0 0 1 5.007.002 3 3 0 0 0 4.632 2.672c.579.59 1.093 1.261 1.525 2.01.433.749.757 1.53.978 2.326a3 3 0 0 0-.002 5.347 9.99 9.99 0 0 1-2.501 4.337 3 3 0 0 0-4.631 2.674 9.99 9.99 0 0 1-5.007-.002 3 3 0 0 0-4.632-2.672A10.018 10.018 0 0 1 3.34 17zm5.66.196a4.993 4.993 0 0 1 2.25 2.77c.499.047 1 .048 1.499.001A4.993 4.993 0 0 1 15 17.197a4.993 4.993 0 0 1 3.525-.565c.29-.408.54-.843.748-1.298A4.993 4.993 0 0 1 18 12c0-1.26.47-2.437 1.273-3.334a8.126 8.126 0 0 0-.75-1.298A4.993 4.993 0 0 1 15 6.804a4.993 4.993 0 0 1-2.25-2.77c-.499-.047-1-.048-1.499-.001A4.993 4.993 0 0 1 9 6.803a4.993 4.993 0 0 1-3.525.565 7.99 7.99 0 0 0-.748 1.298A4.993 4.993 0 0 1 6 12c0 1.26-.47 2.437-1.273 3.334a8.126 8.126 0 0 0 .75 1.298A4.993 4.993 0 0 1 9 17.196zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path>
-                        </svg>
-                        Update </a></div>
-
-                <div>
-
-                    <h2 class="text-black font-bold text-2xl leading-none mt-8 mb-4">User Comment</h2>
-                    <div class="comments-wrap rounded-2xl bg-white shadow-xl p-2">
-                                                    <div class="comment">
+                        <h2 class="text-black font-bold text-2xl leading-none mt-8 mb-4">User Comment</h2>
+                        <div class="comments-wrap rounded-2xl bg-white shadow-xl p-2">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/vjUaGcC.jpg" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/vjUaGcC.jpg" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Varun</div>
                                         <div class="text-sm text-black">
@@ -459,53 +658,62 @@
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/MIPzdPP.jpg" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/MIPzdPP.jpg" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Funny</div>
                                         <div class="text-sm text-black">
-                                            <p>Thank you very much for this bank, I now live very well on interest every day.</p>
+                                            <p>Thank you very much for this bank, I now live very well on interest every
+                                                day.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/eMgq0Pf.jpg" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/eMgq0Pf.jpg" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Lily</div>
                                         <div class="text-sm text-black">
-                                            <p>At the beginning, I knew why I invited so many people, but now I found out that the people I invited have created a lot of income for me.</p>
+                                            <p>At the beginning, I knew why I invited so many people, but now I found
+                                                out that the people I invited have created a lot of income for me.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/lQjESUC.jpg" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/lQjESUC.jpg" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">kitty</div>
                                         <div class="text-sm text-black">
-                                            <p>This is the best bank I've ever seen and I've invested all my money in it. Withdraw interest every day.</p>
+                                            <p>This is the best bank I've ever seen and I've invested all my money in
+                                                it. Withdraw interest every day.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/AbaCUAc.jpg" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/AbaCUAc.jpg" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Hassan Rami</div>
                                         <div class="text-sm text-black">
-                                            <p>Thanks to my friend's recommendation, I finally have the money to take my family to travel.</p>
+                                            <p>Thanks to my friend's recommendation, I finally have the money to take my
+                                                family to travel.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/Tv6eJY0.jpg" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/Tv6eJY0.jpg" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Casey Daniels</div>
                                         <div class="text-sm text-black">
@@ -514,9 +722,10 @@
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/NEC98Ve.jpg" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/NEC98Ve.jpg" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Walter Hoffman</div>
                                         <div class="text-sm text-black">
@@ -525,53 +734,62 @@
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/70kUwOR.jpg" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/70kUwOR.jpg" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Hugo Montgomery</div>
                                         <div class="text-sm text-black">
-                                            <p>I have not invested but I have invited more than 100 people, and now I have 500USD withdrawn every day.</p>
+                                            <p>I have not invested but I have invited more than 100 people, and now I
+                                                have 500USD withdrawn every day.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/unPe1Wm.jpg" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/unPe1Wm.jpg" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Remi Peltier</div>
                                         <div class="text-sm text-black">
-                                            <p>By chance, the btcbank address is near my house, I visited BTCbank and was stunned. Super technology sense super powerful.</p>
+                                            <p>By chance, the btcbank address is near my house, I visited BTCbank and
+                                                was stunned. Super technology sense super powerful.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/g9p8PXS.jpg" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/g9p8PXS.jpg" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Stephane Loupe</div>
                                         <div class="text-sm text-black">
-                                            <p>I was recommended by my dad to invest. Now you don't have to ask your family for money.</p>
+                                            <p>I was recommended by my dad to invest. Now you don't have to ask your
+                                                family for money.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/qw42A3V.png" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/qw42A3V.png" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Tracy Schmeler</div>
                                         <div class="text-sm text-black">
-                                            <p>I don't like watching boring videos anymore, I just want to invite more people and make more money every day.</p>
+                                            <p>I don't like watching boring videos anymore, I just want to invite more
+                                                people and make more money every day.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/VH3kS2l.png" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/VH3kS2l.png" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Sandy Orn</div>
                                         <div class="text-sm text-black">
@@ -580,9 +798,10 @@
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/0ZHwke0.png" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/0ZHwke0.png" alt="">
                                     <div class="ml-4">
                                         <div class="font-bold text-green-dark">Robert De Villiers</div>
                                         <div class="text-sm text-black">
@@ -591,113 +810,121 @@
                                     </div>
                                 </div>
                             </div>
-                                                    <div class="comment">
+                            <div class="comment">
                                 <div class="flex">
-                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;" src="images/wqfCZsv.png" alt="">
+                                    <img class="rounded-full" style="width:56px;max-width: 60px;height: 56px;"
+                                        src="images/wqfCZsv.png" alt="">
                                     <div class="ml-4">
-                                        <div class="font-bold text-green-dark">Annie Clérisseau</div>
+                                        <div class="font-bold text-green-dark">Annie Clï¿½risseau</div>
                                         <div class="text-sm text-black">
-                                            <p>At first I didn't know how to buy it, but later I learned to buy btc on the Binance app, and then go directly to the btc address on this platform, which is very convenient.</p>
+                                            <p>At first I didn't know how to buy it, but later I learned to buy btc on
+                                                the Binance app, and then go directly to the btc address on this
+                                                platform, which is very convenient.</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-gray italic text-sm mt-6 max-w-xl">Don't limit yourself to fixed-price plans. You
+                        decide how much Bitcoin you want to invest! There is no maintenance or waiting period. There are
+                        no hidden setup or transfer fees. There are no term limits. The more investment, the higher the
+                        return. Withdrawals are available every day.</p>
                 </div>
-
-            <p class="text-gray italic text-sm mt-6 max-w-xl">Don't limit yourself to fixed-price plans. You decide how much Bitcoin you want to invest! There is no maintenance or waiting period. There are no hidden setup or transfer fees. There are no term limits. The more investment, the higher the return. Withdrawals are available every day.</p></div>
-    </div>
-</div>
-<script data-cfasync="false" src="js/email-decode.min.js"></script><script src="js/script.js" async=""></script>
-
-
-
-<script>
-    function copyValue(id) {
-        var copy = document.getElementById(id)
-        copy.select()
-        document.execCommand('copy')
-        createAlert('cc',"Copy successfully")
-    }
-
-    let htmltext2="<h1 class=\"mb-8 text-2xl font-semibold text-black\">Congratulations!<‰<‰</h1>\n" +
-        "    <h1 class=\"mb-3 text-2xl text-warn\"><Popular benefits<</h1>\n" +
-        "    <h1 class=\"mb-3 text-left text-green\">Invite friends to register successfully today and get a $2 reward immediately</h1>\n" +
-        `    <h1 class=\"mb-3 text-left text-green\">Invest 0.001BTC today (original price 0.01BTC) can directly upgrade the <span class="text-danger"> VIP level </span>, upgrade to <span class="text-danger"> VIP2 </span>, daily interest rate Automatically increases to <span class="text-danger"> 4% </span></h1>\n` +
-        "    <h1 class=\"mb-3 text-left text-black\">permanent upgrade =¥</h1>\n" +
-        "    <h1 class=\"mb-3 text-left text-danger\">Benefits only available today</h1>\n" +
-        "    <h1 class=\"mb-3 text-left text-left text-black\">Hurry up and click the 'Invest now' button below to participate</h1>"
-
-    htmltext = "<h1 class=\"mb-8 text-2xl font-semibold text-black\">Congratulations!<‰<‰</h1>\n" +
-        "    <h1 class=\"mb-3 text-2xl text-warn\"><Popular benefits<</h1>\n" +
-        "    <h1 class=\"mb-3 text-left text-green\">Invite friends to register successfully today and get a $2 reward immediately</h1>\n" +
-        "    <h1 class=\"mb-3 text-left text-black\">Rewards reach your account immediately =¥</h1>\n" +
-        "    <h1 class=\"mb-3 text-left text-danger\">Benefits only available today</h1>\n" +
-        `    <h1 class=\"mb-3 text-left text-left text-black\">Hurry up and click the "Invite Now" button below to participate</h1>`+
-        "    <h1 class=\"mb-3 text-left text-base text-danger\">If fraudulent behavior is detected by the system, the inviter will be punished</h1>\n"+
-        "    <h1 class=\"mb-3 text-left text-base text-danger\">Recently, a lot of users have illegally registered subordinates to receive bonuses.</h1>\n"+
-        "    <h1 class=\"mb-3 text-left text-base text-danger\">Illegal registered users have been punished by the system.</h1>\n"+
-        "    <h1 class=\"mb-3 text-left text-base text-danger\">Please don't do these meaningless things.</h1>\n"
-
-    htmltext1="<h1 class=\"mb-8 text-2xl font-semibold text-black\">Congratulations!<‰<‰</h1>\n" +
-        "    <h1 class=\"mb-3 text-2xl text-warn\"><Popular benefits<</h1>\n" +
-        `    <h1 class=\"mb-3 text-left text-green\">Invest more than 0.001BTC today and get an extra $10</h1>\n` +
-        "    <h1 class=\"mb-3 text-left text-black\">Rewards reach your account immediately =¥</h1>\n" +
-        "    <h1 class=\"mb-3 text-left text-danger\">Benefits only available today</h1>\n" +
-        "    <h1 class=\"mb-3 text-left text-left text-black\">Hurry up and click the 'Invest now' button below to participate</h1>"
+            </div>
+        </div>
+        <script data-cfasync="false" src="js/email-decode.min.js"></script>
+        <script src="js/script.js" async=""></script>
 
 
 
-    
+        <script>
+            function copyValue(id) {
+                var copy = document.getElementById(id)
+                copy.select()
+                document.execCommand('copy')
+                createAlert('cc', "Copy successfully")
+            }
+
+            let htmltext2 = "<h1 class=\"mb-8 text-2xl font-semibold text-black\">Congratulations!<ï¿½<ï¿½</h1>\n" +
+                "    <h1 class=\"mb-3 text-2xl text-warn\"><ï¿½Popular benefits<ï¿½</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-green\">Invite friends to register successfully today and get a $2 reward immediately</h1>\n" +
+                `    <h1 class=\"mb-3 text-left text-green\">Invest 0.001BTC today (original price 0.01BTC) can directly upgrade the <span class="text-danger"> VIP level </span>, upgrade to <span class="text-danger"> VIP2 </span>, daily interest rate Automatically increases to <span class="text-danger"> 4% </span></h1>\n` +
+                "    <h1 class=\"mb-3 text-left text-black\">permanent upgrade =ï¿½</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-danger\">Benefits only available today</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-left text-black\">Hurry up and click the 'Invest now' button below to participate</h1>"
+
+            htmltext = "<h1 class=\"mb-8 text-2xl font-semibold text-black\">Congratulations!<ï¿½<ï¿½</h1>\n" +
+                "    <h1 class=\"mb-3 text-2xl text-warn\"><ï¿½Popular benefits<ï¿½</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-green\">Invite friends to register successfully today and get a $2 reward immediately</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-black\">Rewards reach your account immediately =ï¿½</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-danger\">Benefits only available today</h1>\n" +
+                `    <h1 class=\"mb-3 text-left text-left text-black\">Hurry up and click the "Invite Now" button below to participate</h1>` +
+                "    <h1 class=\"mb-3 text-left text-base text-danger\">If fraudulent behavior is detected by the system, the inviter will be punished</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-base text-danger\">Recently, a lot of users have illegally registered subordinates to receive bonuses.</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-base text-danger\">Illegal registered users have been punished by the system.</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-base text-danger\">Please don't do these meaningless things.</h1>\n"
+
+            htmltext1 = "<h1 class=\"mb-8 text-2xl font-semibold text-black\">Congratulations!<ï¿½<ï¿½</h1>\n" +
+                "    <h1 class=\"mb-3 text-2xl text-warn\"><ï¿½Popular benefits<ï¿½</h1>\n" +
+                `    <h1 class=\"mb-3 text-left text-green\">Invest more than 0.001BTC today and get an extra $10</h1>\n` +
+                "    <h1 class=\"mb-3 text-left text-black\">Rewards reach your account immediately =ï¿½</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-danger\">Benefits only available today</h1>\n" +
+                "    <h1 class=\"mb-3 text-left text-left text-black\">Hurry up and click the 'Invest now' button below to participate</h1>"
 
 
-    
 
-    
-    
-    var tips = "<h1 class=\"mb-8 text-2xl font-semibold text-black\">Warm Tips</h1>\n" +
-        "    <h1 class=\"mb-3 text-green\">The price of BTC has bottomed out recently and is starting to rebound, so now is a good time to buy.</h1>\n"+
-        "    <h1 class=\"mb-3 text-green\">It is recommended that you buy a large amount of BTC and deposit it in our bank.</h1>\n"+
-        "    <h1 class=\"mb-3 text-green\">Our bank estimates that the BTC price will exceed $100,000 by the end of the year.</h1>\n"+
-        "    <h1 class=\"mb-3 text-warn\">Welcome to invest!</h1>\n";
 
-    Swal.fire({
-        html:tips,
-        confirmButtonText: `Invest now`,
-        showCancelButton: true,
-        cancelButtonText: `Cancel`,
-    }).then((result)=>{
-        if(result.isConfirmed){
-            location.href="/recharge.php"
-        }
-    })
 
-        Swal.fire({
-        html:htmltext2,
-        confirmButtonText: `=%Invest now`,
-        denyButtonText: `=%Invite Now`,
 
-        showCancelButton: true,
-        showDenyButton: true,
-        cancelButtonText: `Cancel`
-    }).then((result)=>{
-        if(result.isConfirmed){
-            location.href='/recharge.php'
-            // location.href='/referrals.php'
-        }
-        if(result.isDenied){
-            // location.href='/recharge.php'
-            location.href='/referrals.php'
-        }
-    })
-    
-    </script>
-<script src="js/jquery.min.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/toastr.min.css">
-<link rel="stylesheet" href="css/ext-component-toastr.css">
-<script src="js/toastr.min.js"></script>
 
-<script>
+
+
+
+            var tips = "<h1 class=\"mb-8 text-2xl font-semibold text-black\">Warm Tips</h1>\n" +
+                "    <h1 class=\"mb-3 text-green\">The price of BTC has bottomed out recently and is starting to rebound, so now is a good time to buy.</h1>\n" +
+                "    <h1 class=\"mb-3 text-green\">It is recommended that you buy a large amount of BTC and deposit it in our bank.</h1>\n" +
+                "    <h1 class=\"mb-3 text-green\">Our bank estimates that the BTC price will exceed $100,000 by the end of the year.</h1>\n" +
+                "    <h1 class=\"mb-3 text-warn\">Welcome to invest!</h1>\n";
+
+            Swal.fire({
+                html: tips,
+                confirmButtonText: `Invest now`,
+                showCancelButton: true,
+                cancelButtonText: `Cancel`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = "/recharge.html"
+                }
+            })
+
+            Swal.fire({
+                html: htmltext2,
+                confirmButtonText: `=%Invest now`,
+                denyButtonText: `=%Invite Now`,
+
+                showCancelButton: true,
+                showDenyButton: true,
+                cancelButtonText: `Cancel`
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.href = '/recharge.html'
+                    // location.href='/referrals.html'
+                }
+                if (result.isDenied) {
+                    // location.href='/recharge.html'
+                    location.href = '/referrals.html'
+                }
+            })
+
+        </script>
+        <script src="js/jquery.min.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/toastr.min.css">
+        <link rel="stylesheet" href="css/ext-component-toastr.css">
+        <script src="js/toastr.min.js"></script>
+
+        <!-- <script>
     function numberWithCommas(x) {
         return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
     }
@@ -740,4 +967,4 @@
         showToast();
         doToast(randomIntFromInterval(30, 50)*1000);
     }, randomIntFromInterval(5, 15) * 1000);
-</script></div></body></html>
+</script></div></body></html> -->

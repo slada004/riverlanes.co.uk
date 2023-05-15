@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,71 +28,93 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="sweetalert2%4011"></script>
 </head>
+
 <body class="bg-white-dark relative min-h-screen">
-<header class="sticky top-0 shadow-md z-10">
-    <div class="bg-black" style="display:none;">
-        <div class="2xl:container mx-auto flex items-center justify-between py-1.5 px-2">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow" viewBox="0 0 24 24" width="22" height="22">
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path fill="currentColor" d="M17 16h2V4H9v2h8v10zm0 2v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3zM7 16v2h2v1h2v-1h.5a2.5 2.5 0 1 0 0-5h-3a.5.5 0 1 1 0-1H13v-2h-2V9H9v1h-.5a2.5 2.5 0 1 0 0 5h3a.5.5 0 1 1 0 1H7z"></path>
-                </svg>
-            </div>
-            <ul class="lg:flex text-white text-xs items-center justify-center">
-                <li class="px-4">1 BTC = 11428134 ₦</li>
-                <!--                <li class="px-4">1 BTC = 43641.72 EUR</li>-->
-                <!--                <li class="px-4">1 BTC = 37155.98 GBP</li>-->
-                <!--                <li class="px-4">1 BTC = 3722317.63 INR</li>-->
-                <!--                <li class="px-4">1 BTC = 3651148.70 RUB</li>-->
-            </ul>
-            <div><select class="setcurrency bg-black hover:bg-black-dark focus:bg-black-dark w-24 rounded-sm py-1 px-3 cursor-pointer text-sm text-white border border-white" title="Choose your currency">
-                    <option value="btc" selected="">BTC</option>
-                    <option value="usd">NGN</option>
-                    <!--                    <option value="eur">EUR</option>-->
-                    <!--                    <option value="gbp">GBP</option>-->
-                    <!--                    <option value="inr">INR</option>-->
-                    <!--                    <option value="rub">RUB</option>-->
-                </select></div>
-        </div>
-    </div>
-    <div class="bg-white">
-        <div class="2xl:container mx-auto py-3 xl:py-6 px-2 leading-none relative">
-            <div class="flex items-center justify-between xl:hidden">
-                                <a href="/" class="block"><img src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
-                <button class="p-2 rounded-sm hover:bg-white-dark text-black toggle" data-target="mobileMenu" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <header class="sticky top-0 shadow-md z-10">
+        <div class="bg-black" style="display:none;">
+            <div class="2xl:container mx-auto flex items-center justify-between py-1.5 px-2">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow" viewBox="0 0 24 24" width="22"
+                        height="22">
                         <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z"></path>
+                        <path fill="currentColor"
+                            d="M17 16h2V4H9v2h8v10zm0 2v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3zM7 16v2h2v1h2v-1h.5a2.5 2.5 0 1 0 0-5h-3a.5.5 0 1 1 0-1H13v-2h-2V9H9v1h-.5a2.5 2.5 0 1 0 0 5h3a.5.5 0 1 1 0 1H7z">
+                        </path>
                     </svg>
-                </button>
-                <div id="mobileMenu" class="bg-white absolute inset-x-0 top-full shadow-md" hidden="">
-                    <nav class="grid grid-cols-2 gap-2">
+                </div>
+                <ul class="lg:flex text-white text-xs items-center justify-center">
+                    <li class="px-4">1 BTC = 11428134 ₦</li>
+                    <!--                <li class="px-4">1 BTC = 43641.72 EUR</li>-->
+                    <!--                <li class="px-4">1 BTC = 37155.98 GBP</li>-->
+                    <!--                <li class="px-4">1 BTC = 3722317.63 INR</li>-->
+                    <!--                <li class="px-4">1 BTC = 3651148.70 RUB</li>-->
+                </ul>
+                <div><select
+                        class="setcurrency bg-black hover:bg-black-dark focus:bg-black-dark w-24 rounded-sm py-1 px-3 cursor-pointer text-sm text-white border border-white"
+                        title="Choose your currency">
+                        <option value="btc" selected="">BTC</option>
+                        <option value="usd">NGN</option>
+                        <!--                    <option value="eur">EUR</option>-->
+                        <!--                    <option value="gbp">GBP</option>-->
+                        <!--                    <option value="inr">INR</option>-->
+                        <!--                    <option value="rub">RUB</option>-->
+                    </select></div>
+            </div>
+        </div>
+        <div class="bg-white">
+            <div class="2xl:container mx-auto py-3 xl:py-6 px-2 leading-none relative">
+                <div class="flex items-center justify-between xl:hidden">
+                    <a href="/" class="block"><img src="./images/GRI.png" style="height: 30%; width: 30%;" alt="Logo"></a>
+                    <button class="p-2 rounded-sm hover:bg-white-dark text-black toggle" data-target="mobileMenu"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor" d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z"></path>
+                        </svg>
+                    </button>
+                    <div id="mobileMenu" class="bg-white absolute inset-x-0 top-full shadow-md" hidden="">
+                        <nav class="grid grid-cols-2 gap-2">
 
-                                                <ul class="flex flex-col items-start text-black text-sm pl-2 pb-2">
-                            <li class="w-36"><a class="inline-flex w-full items-center py-1.5 px-2 rounded text-white bg-black hover:bg-black-dark" href="/login.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z"></path>
-                                    </svg>
-                                    Sign in</a></li>
-                            <li class="w-36 mt-0.5"><a class="inline-flex w-full items-center py-1.5 px-2 rounded text-black bg-green hover:bg-green-dark" href="/register.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z"></path>
-                                    </svg>
-                                    Sign up </a></li>
+                            <ul class="flex flex-col items-start text-black text-sm pl-2 pb-2">
+                                <li class="w-36"><a
+                                        class="inline-flex w-full items-center py-1.5 px-2 rounded text-white bg-black hover:bg-black-dark"
+                                        href="/login.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z">
+                                            </path>
+                                        </svg>
+                                        Sign in</a></li>
+                                <li class="w-36 mt-0.5"><a
+                                        class="inline-flex w-full items-center py-1.5 px-2 rounded text-black bg-green hover:bg-green-dark"
+                                        href="/register.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5" viewBox="0 0 24 24"
+                                            width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z">
+                                            </path>
+                                        </svg>
+                                        Sign up </a></li>
 
-                        </ul>
-                                                
-                        <ul class="flex flex-col items-end text-gray text-sm pr-4 pb-2">
-                            <li>
-                                <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold" href="/">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z"></path>
-                                    </svg>
-                                    Home </a></li>
-                           <!-- <li class="mt-0.5"><a
+                            </ul>
+
+                            <ul class="flex flex-col items-end text-gray text-sm pr-4 pb-2">
+                                <li>
+                                    <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold"
+                                        href="/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z">
+                                            </path>
+                                        </svg>
+                                        Home </a>
+                                </li>
+                                <!-- <li class="mt-0.5"><a
                                         class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
                                         href="/pricing.php">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24"
@@ -99,49 +124,75 @@
                                               d="M13 9h8L11 24v-9H4l9-15v9zm-2 2V7.22L7.532 13H13v4.394L17.263 11H11z"/>
                                     </svg>
                                     Pricing </a></li>-->
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/insights.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
-                                        <path fill="currentColor" d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z"></path>
-                                    </svg>
-                                    Insights </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/about.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                    </svg>
-                                    About </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/faq.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"></path>
-                                    </svg>
-                                    FAQs </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/affiliate.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"></path>
-                                    </svg>
-                                    Affiliate </a></li>
-                        </ul>
-                    </nav>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/payout.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
+                                            <path fill="currentColor"
+                                                d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z">
+                                            </path>
+                                        </svg>
+                                        Insights </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/about.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z">
+                                            </path>
+                                        </svg>
+                                        About </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/faq.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z">
+                                            </path>
+                                        </svg>
+                                        FAQs </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/affiliate.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z">
+                                            </path>
+                                        </svg>
+                                        Affiliate </a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-            <div class="hidden xl:flex items-center">
-                <a href="/" class="block"><img src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light ml-4 mr-2.5" width="22" height="22" viewBox="0 0 29.302 25.519">
-                    <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
-                </svg>
-                <nav>
-                    <ul class="flex text-gray">
-                        <li>
-                            <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold" href="/">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z"></path>
-                                </svg>
-                                Home </a></li>
-                      <!--  <li class="ml-2"><a
+                <div class="hidden xl:flex items-center">
+                    <a href="/" class="block"><img src="images/GRI.png" style="height: 90px;" alt="Logo"></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light ml-4 mr-2.5" width="22" height="22"
+                        viewBox="0 0 29.302 25.519">
+                        <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
+                    </svg>
+                    <nav>
+                        <ul class="flex text-gray">
+                            <li>
+                                <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold"
+                                    href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z">
+                                        </path>
+                                    </svg>
+                                    Home </a>
+                            </li>
+                            <!--  <li class="ml-2"><a
                                     class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
                                     href="/pricing.php">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24"
@@ -151,161 +202,229 @@
                                           d="M13 9h8L11 24v-9H4l9-15v9zm-2 2V7.22L7.532 13H13v4.394L17.263 11H11z"/>
                                 </svg>
                                 Pricing </a></li>-->
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/insights.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
-                                    <path fill="currentColor" d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z"></path>
-                                </svg>
-                                Insights </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/about.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                </svg>
-                                About </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/faq.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"></path>
-                                </svg>
-                                FAQs </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/affiliate.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"></path>
-                                </svg>
-                                Affiliate </a></li>
-                    </ul>
-                </nav>
-                                <nav class="ml-auto flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light mr-4 ml-2.5" width="22" height="22" viewBox="0 0 29.302 25.519">
-                        <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
-                    </svg>
-                    <a href="/login.php" class="bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24" width="22" height="22">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z"></path>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/payout.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
+                                        <path fill="currentColor"
+                                            d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z">
+                                        </path>
+                                    </svg>
+                                    Insights </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/about.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z">
+                                        </path>
+                                    </svg>
+                                    About </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/faq.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z">
+                                        </path>
+                                    </svg>
+                                    FAQs </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/affiliate.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z">
+                                        </path>
+                                    </svg>
+                                    Affiliate </a></li>
+                        </ul>
+                    </nav>
+                    <nav class="ml-auto flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light mr-4 ml-2.5" width="22"
+                            height="22" viewBox="0 0 29.302 25.519">
+                            <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
                         </svg>
-                        Sign in </a>
+                        <a href="/login.html"
+                            class="bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24"
+                                width="22" height="22">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z">
+                                </path>
+                            </svg>
+                            Sign in </a>
 
-						<a href="/register.php" class="ml-2 bg-green text-black hover:bg-green-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" viewBox="0 0 24 24" width="22" height="22">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z"></path>
-                        </svg>
-                        Sign up </a>
+                        <a href="/register.html"
+                            class="ml-2 bg-green text-black hover:bg-green-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" viewBox="0 0 24 24" width="22"
+                                height="22">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z">
+                                </path>
+                            </svg>
+                            Sign up </a>
 
-                </nav>
-                
+                    </nav>
 
-                            </div>
+
+                </div>
+            </div>
         </div>
-    </div>
-    <script async="" src="js_1"></script>
-    <script> window.dataLayer = window.dataLayer || [];
+        <script async="" src="js_1"></script>
+        <script> window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-        gtag('js', new Date());
-        gtag('config', 'G-7X3CC5H5S2');
+            gtag('js', new Date());
+            gtag('config', 'G-7X3CC5H5S2');
 
-    
-    </script>
-</header>
+
+        </script>
+    </header>
 
     <main>
         <div class="bg-headline bg-no-repeat bg-cover bg-center relative">
             <div class="bg-gradient-to-tr from-black-95 via-black-75 to-black-95">
-                <div class="2xl:container mx-auto px-4 py-14 lg:pl-28"><h1 class="font-serif font-black text-4xl sm:text-5xl text-white">Affiliate</h1></div>
+                <div class="2xl:container mx-auto px-4 py-14 lg:pl-28">
+                    <h1 class="font-serif font-black text-4xl sm:text-5xl text-white">Affiliate</h1>
+                </div>
             </div>
         </div>
         <div class="2xl:container mx-auto px-2 pt-14 lg:pt-28">
-            <div class="rounded-2xl bg-white shadow-xl px-10 md:px-14 py-8 md:py-12 mx-auto max-w-screen-lg grid grid-cols-1 md:grid-cols-3 gap-4 sm:bg-gift bg-right bg-cover sm:bg-contain bg-no-repeat">
+            <div
+                class="rounded-2xl bg-white shadow-xl px-10 md:px-14 py-8 md:py-12 mx-auto max-w-screen-lg grid grid-cols-1 md:grid-cols-3 gap-4 sm:bg-gift bg-right bg-cover sm:bg-contain bg-no-repeat">
                 <div class="md:col-span-2">
-<!--                    <div class="text-black text-lg font-medium leading-none">--><!--</div>-->
-                    <h2 class="text-black font-serif font-black text-4xl leading-none mt-1 mb-3">Get up to <span class="text-green font-sans">5+2+1%</span> commission</h2>
-                    <p class="leading-relaxed text-gray">Sign up now and invite new customers with your personal referral link. Receive up to 8% commission in the form of additional hashpower.</p></div>
+                    <!--                    <div class="text-black text-lg font-medium leading-none">--><!--</div>-->
+                    <h2 class="text-black font-serif font-black text-4xl leading-none mt-1 mb-3">Get up to <span
+                            class="text-green font-sans">5+2+1%</span> commission</h2>
+                    <p class="leading-relaxed text-gray">Sign up now and invite new customers with your personal
+                        referral link. Receive up to 8% commission in the form of additional hashpower.</p>
+                </div>
                 <div class="flex md:justify-center items-center">
 
-                                        <a href="/register.php" class="shadow text-lg bg-green text-black hover:bg-green-dark rounded py-2 px-6 inline-flex items-center justify-center">
+                    <a href="/register.html"
+                        class="shadow text-lg bg-green text-black hover:bg-green-dark rounded py-2 px-6 inline-flex items-center justify-center">
                         <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" viewBox="0 0 24 24" width="24" height="24">
                             <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm7 8H7v2h4v4h2v-4h4v-2h-4V7h-2v4z"></path>
+                            <path fill="currentColor"
+                                d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm7 8H7v2h4v4h2v-4h4v-2h-4V7h-2v4z">
+                            </path>
                         </svg>
                         Sign Up Now </a>
-                                        
+
                 </div>
             </div>
         </div>
         <div class="2xl:container mx-auto px-2 py-14 lg:py-28 grid grid-cols-1 xl:grid-cols-2 gap-10">
             <div class="flex flex-col items-center">
                 <div class="text-black text-lg font-medium leading-none text-center">Expand your earnings</div>
-                <h2 class="text-black font-serif font-black text-4xl leading-none mt-1 mb-4 text-center">Our <span class="text-green font-sans">3-level</span> referral system</h2>
+                <h2 class="text-black font-serif font-black text-4xl leading-none mt-1 mb-4 text-center">Our <span
+                        class="text-green font-sans">3-level</span> referral system</h2>
                 <ul class="mt-4 leading-relaxed text-lg font-medium text-gray">
                     <li class="block">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24" width="24" height="24">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24"
+                            width="24" height="24">
                             <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                            <path fill="currentColor"
+                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
                         </svg>
-                        Level 1 – <strong>5%</strong></li>
+                        Level 1 – <strong>5%</strong>
+                    </li>
                     <li class="block">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24" width="24" height="24">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24"
+                            width="24" height="24">
                             <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                            <path fill="currentColor"
+                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
                         </svg>
-                        Level 2 – <strong>2%</strong></li>
+                        Level 2 – <strong>2%</strong>
+                    </li>
                     <li class="block">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24" width="24" height="24">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24"
+                            width="24" height="24">
                             <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                            <path fill="currentColor"
+                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
                         </svg>
-                        Level 3 – <strong>1%</strong></li>
+                        Level 3 – <strong>1%</strong>
+                    </li>
                     <li class="block">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24" width="24" height="24">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24"
+                            width="24" height="24">
                             <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                            <path fill="currentColor"
+                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
                         </svg>
-                        No limits or requirements                    </li>
+                        No limits or requirements
+                    </li>
                 </ul>
 
 
-                <a href="/register.php" class="mt-6 shadow text-lg bg-black text-white hover:bg-black-dark rounded py-2 px-6 inline-flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-yellow" viewBox="0 0 24 24" width="24" height="24">
+                <a href="/register.html"
+                    class="mt-6 shadow text-lg bg-black text-white hover:bg-black-dark rounded py-2 px-6 inline-flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-yellow" viewBox="0 0 24 24" width="24"
+                        height="24">
                         <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M17.657 14.828l-1.414-1.414L17.657 12A4 4 0 1 0 12 6.343l-1.414 1.414-1.414-1.414 1.414-1.414a6 6 0 0 1 8.485 8.485l-1.414 1.414zm-2.829 2.829l-1.414 1.414a6 6 0 1 1-8.485-8.485l1.414-1.414 1.414 1.414L6.343 12A4 4 0 1 0 12 17.657l1.414-1.414 1.414 1.414zm0-9.9l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07zM5.775 2.293l1.932-.518L8.742 5.64l-1.931.518-1.036-3.864zm9.483 16.068l1.931-.518 1.036 3.864-1.932.518-1.035-3.864zM2.293 5.775l3.864 1.036-.518 1.931-3.864-1.035.518-1.932zm16.068 9.483l3.864 1.035-.518 1.932-3.864-1.036.518-1.931z"></path>
+                        <path fill="currentColor"
+                            d="M17.657 14.828l-1.414-1.414L17.657 12A4 4 0 1 0 12 6.343l-1.414 1.414-1.414-1.414 1.414-1.414a6 6 0 0 1 8.485 8.485l-1.414 1.414zm-2.829 2.829l-1.414 1.414a6 6 0 1 1-8.485-8.485l1.414-1.414 1.414 1.414L6.343 12A4 4 0 1 0 12 17.657l1.414-1.414 1.414 1.414zm0-9.9l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07zM5.775 2.293l1.932-.518L8.742 5.64l-1.931.518-1.036-3.864zm9.483 16.068l1.931-.518 1.036 3.864-1.932.518-1.035-3.864zM2.293 5.775l3.864 1.036-.518 1.931-3.864-1.035.518-1.932zm16.068 9.483l3.864 1.035-.518 1.932-3.864-1.036.518-1.931z">
+                        </path>
                     </svg>
                     Get Your Link Today </a>
 
             </div>
             <div class="max-w-xl mx-auto xl:mx-0 xl:max-w-none">
                 <div class="text-black text-lg font-medium leading-none">Simple for everyone</div>
-                <h2 class="text-black font-serif font-black text-4xl leading-none mt-1 mb-4">The BTCBank Partner Program</h2>
-                <p class="leading-relaxed text-gray">Our affiliate program is available to every customer without obligation and can be used directly after registration. Send your personal referral link to friends, acquaintances, in forums or on social media platforms. For every new customer who signs up through your link and purchases hardware power, you will receive a <strong>5% commission (level 1)</strong> on all of his/her total hash power.</p>
-                <p class="leading-relaxed text-gray mt-6">Now, if your recruited user follows the same pattern and also recruits more customers, you will get <strong>2% (level 2)</strong> and <strong>1% (level 3)</strong> on their newly recruited customer's hashpower.</p></div>
+                <h2 class="text-black font-serif font-black text-4xl leading-none mt-1 mb-4">The GRI Partner Program
+                </h2>
+                <p class="leading-relaxed text-gray">Our affiliate program is available to every customer without
+                    obligation and can be used directly after registration. Send your personal referral link to friends,
+                    acquaintances, in forums or on social media platforms. For every new customer who signs up through
+                    your link and purchases hardware power, you will receive a <strong>5% commission (level 1)</strong>
+                    on all of his/her total hash power.</p>
+                <p class="leading-relaxed text-gray mt-6">Now, if your recruited user follows the same pattern and also
+                    recruits more customers, you will get <strong>2% (level 2)</strong> and <strong>1% (level
+                        3)</strong> on their newly recruited customer's hashpower.</p>
+            </div>
         </div>
     </main>
 
 
-<footer class="hidden md:block bg-white absolute inset-x-0 bottom-0 border-t border-gray-light">
-    <div class="2xl:container mx-auto px-2 py-6 text-center"><a href="/" class="inline-block mb-2"><img src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
-        <ul class="leading-loose max-w-md mx-auto text-gray text-sm">
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/">Home</a></li>
-           <!-- <li class="inline-block mx-1.5"><a class="hover:text-black" href="/pricing.php">Pricing</a></li>-->
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/affiliate.php">Affiliate</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/faq.php">FAQs</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/about.php">About</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/antifraud.php">Anti Fraud</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/terms.php">Terms of Service</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/insights.php">Insights</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/login.php">Sign in</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/forgot-password.php">Forgot password?</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/register.php">Sign up</a></li>
-        </ul>
-        <p class="text-black text-xs mt-4">Copyright © 2022 BTCBank</p></div>
-</footer>
-<script src="js/script.js" async=""></script>
-<script>(function(){var js = "window['__CF$cv$params']={r:'7bc755a688b6b890',m:'JyVte8P.iopUVTbaqytwCAyBqAb9gn5OU7tuawo5QfY-1682265785-0-AcsJFBaMlP00ZywFQ/PJA6ql3a3KnH8jpDUvYYVQlm6K',u:'/cdn-cgi/challenge-platform/h/g'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script>
+    <footer class="hidden md:block bg-white absolute inset-x-0 bottom-0 border-t border-gray-light">
+        <div class="2xl:container mx-auto px-2 py-6 text-center"><a href="/" class="inline-block mb-2"><img
+                    src="images/GRI.png" style="height: 70px;" alt="Logo"></a>
+            <ul class="leading-loose max-w-md mx-auto text-gray text-sm">
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/">Home</a></li>
+                <!-- <li class="inline-block mx-1.5"><a class="hover:text-black" href="/pricing.php">Pricing</a></li>-->
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/affiliate.html">Affiliate</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/faq.html">FAQs</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/about.html">About</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/antifraud.html">Anti Fraud</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/terms.html">Terms of Service</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/payout.html">Insights</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/login.html">Sign in</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/forgot-password.html">Forgot
+                        password?</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/register.html">Sign up</a></li>
+            </ul>
+            <p class="text-black text-xs mt-4">Copyright © 2022 GRI</p>
+        </div>
+    </footer>
+    <script src="js/script.js" async=""></script>
+    <script>(function () { var js = "window['__CF$cv$params']={r:'7bc755a688b6b890',m:'JyVte8P.iopUVTbaqytwCAyBqAb9gn5OU7tuawo5QfY-1682265785-0-AcsJFBaMlP00ZywFQ/PJA6ql3a3KnH8jpDUvYYVQlm6K',u:'/cdn-cgi/challenge-platform/h/g'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);"; var _0xh = document.createElement('iframe'); _0xh.height = 1; _0xh.width = 1; _0xh.style.position = 'absolute'; _0xh.style.top = 0; _0xh.style.left = 0; _0xh.style.border = 'none'; _0xh.style.visibility = 'hidden'; document.body.appendChild(_0xh); function handler() { var _0xi = _0xh.contentDocument || _0xh.contentWindow.document; if (_0xi) { var _0xj = _0xi.createElement('script'); _0xj.nonce = ''; _0xj.innerHTML = js; _0xi.getElementsByTagName('head')[0].appendChild(_0xj); } } if (document.readyState !== 'loading') { handler(); } else if (window.addEventListener) { document.addEventListener('DOMContentLoaded', handler); } else { var prev = document.onreadystatechange || function () { }; document.onreadystatechange = function (e) { prev(e); if (document.readyState !== 'loading') { document.onreadystatechange = prev; handler(); } }; } })();</script>
 
-</body></html>
+</body>
+
+</html>

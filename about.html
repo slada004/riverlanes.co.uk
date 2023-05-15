@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,71 +28,93 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="sweetalert2%4011"></script>
 </head>
+
 <body class="bg-white-dark relative min-h-screen">
-<header class="sticky top-0 shadow-md z-10">
-    <div class="bg-black" style="display:none;">
-        <div class="2xl:container mx-auto flex items-center justify-between py-1.5 px-2">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow" viewBox="0 0 24 24" width="22" height="22">
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path fill="currentColor" d="M17 16h2V4H9v2h8v10zm0 2v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3zM7 16v2h2v1h2v-1h.5a2.5 2.5 0 1 0 0-5h-3a.5.5 0 1 1 0-1H13v-2h-2V9H9v1h-.5a2.5 2.5 0 1 0 0 5h3a.5.5 0 1 1 0 1H7z"></path>
-                </svg>
-            </div>
-            <ul class="lg:flex text-white text-xs items-center justify-center">
-                <li class="px-4">1 BTC = 11428134 ₦</li>
-                <!--                <li class="px-4">1 BTC = 43641.72 EUR</li>-->
-                <!--                <li class="px-4">1 BTC = 37155.98 GBP</li>-->
-                <!--                <li class="px-4">1 BTC = 3722317.63 INR</li>-->
-                <!--                <li class="px-4">1 BTC = 3651148.70 RUB</li>-->
-            </ul>
-            <div><select class="setcurrency bg-black hover:bg-black-dark focus:bg-black-dark w-24 rounded-sm py-1 px-3 cursor-pointer text-sm text-white border border-white" title="Choose your currency">
-                    <option value="btc" selected="">BTC</option>
-                    <option value="usd">NGN</option>
-                    <!--                    <option value="eur">EUR</option>-->
-                    <!--                    <option value="gbp">GBP</option>-->
-                    <!--                    <option value="inr">INR</option>-->
-                    <!--                    <option value="rub">RUB</option>-->
-                </select></div>
-        </div>
-    </div>
-    <div class="bg-white">
-        <div class="2xl:container mx-auto py-3 xl:py-6 px-2 leading-none relative">
-            <div class="flex items-center justify-between xl:hidden">
-                                <a href="/" class="block"><img src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
-                <button class="p-2 rounded-sm hover:bg-white-dark text-black toggle" data-target="mobileMenu" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+    <header class="sticky top-0 shadow-md z-10">
+        <div class="bg-black" style="display:none;">
+            <div class="2xl:container mx-auto flex items-center justify-between py-1.5 px-2">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow" viewBox="0 0 24 24" width="22"
+                        height="22">
                         <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z"></path>
+                        <path fill="currentColor"
+                            d="M17 16h2V4H9v2h8v10zm0 2v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3zM7 16v2h2v1h2v-1h.5a2.5 2.5 0 1 0 0-5h-3a.5.5 0 1 1 0-1H13v-2h-2V9H9v1h-.5a2.5 2.5 0 1 0 0 5h3a.5.5 0 1 1 0 1H7z">
+                        </path>
                     </svg>
-                </button>
-                <div id="mobileMenu" class="bg-white absolute inset-x-0 top-full shadow-md" hidden="">
-                    <nav class="grid grid-cols-2 gap-2">
+                </div>
+                <ul class="lg:flex text-white text-xs items-center justify-center">
+                    <li class="px-4">1 BTC = 11428134 ₦</li>
+                    <!--                <li class="px-4">1 BTC = 43641.72 EUR</li>-->
+                    <!--                <li class="px-4">1 BTC = 37155.98 GBP</li>-->
+                    <!--                <li class="px-4">1 BTC = 3722317.63 INR</li>-->
+                    <!--                <li class="px-4">1 BTC = 3651148.70 RUB</li>-->
+                </ul>
+                <div><select
+                        class="setcurrency bg-black hover:bg-black-dark focus:bg-black-dark w-24 rounded-sm py-1 px-3 cursor-pointer text-sm text-white border border-white"
+                        title="Choose your currency">
+                        <option value="btc" selected="">BTC</option>
+                        <option value="usd">NGN</option>
+                        <!--                    <option value="eur">EUR</option>-->
+                        <!--                    <option value="gbp">GBP</option>-->
+                        <!--                    <option value="inr">INR</option>-->
+                        <!--                    <option value="rub">RUB</option>-->
+                    </select></div>
+            </div>
+        </div>
+        <div class="bg-white">
+            <div class="2xl:container mx-auto py-3 xl:py-6 px-2 leading-none relative">
+                <div class="flex items-center justify-between xl:hidden">
+                    <a href="/" class="block"><img src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
+                    <button class="p-2 rounded-sm hover:bg-white-dark text-black toggle" data-target="mobileMenu"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor" d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z"></path>
+                        </svg>
+                    </button>
+                    <div id="mobileMenu" class="bg-white absolute inset-x-0 top-full shadow-md" hidden="">
+                        <nav class="grid grid-cols-2 gap-2">
 
-                                                <ul class="flex flex-col items-start text-black text-sm pl-2 pb-2">
-                            <li class="w-36"><a class="inline-flex w-full items-center py-1.5 px-2 rounded text-white bg-black hover:bg-black-dark" href="/login.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z"></path>
-                                    </svg>
-                                    Sign in</a></li>
-                            <li class="w-36 mt-0.5"><a class="inline-flex w-full items-center py-1.5 px-2 rounded text-black bg-green hover:bg-green-dark" href="/register.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z"></path>
-                                    </svg>
-                                    Sign up </a></li>
+                            <ul class="flex flex-col items-start text-black text-sm pl-2 pb-2">
+                                <li class="w-36"><a
+                                        class="inline-flex w-full items-center py-1.5 px-2 rounded text-white bg-black hover:bg-black-dark"
+                                        href="/login.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z">
+                                            </path>
+                                        </svg>
+                                        Sign in</a></li>
+                                <li class="w-36 mt-0.5"><a
+                                        class="inline-flex w-full items-center py-1.5 px-2 rounded text-black bg-green hover:bg-green-dark"
+                                        href="/register.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5" viewBox="0 0 24 24"
+                                            width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z">
+                                            </path>
+                                        </svg>
+                                        Sign up </a></li>
 
-                        </ul>
-                                                
-                        <ul class="flex flex-col items-end text-gray text-sm pr-4 pb-2">
-                            <li>
-                                <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold" href="/">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z"></path>
-                                    </svg>
-                                    Home </a></li>
-                           <!-- <li class="mt-0.5"><a
+                            </ul>
+
+                            <ul class="flex flex-col items-end text-gray text-sm pr-4 pb-2">
+                                <li>
+                                    <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold"
+                                        href="/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z">
+                                            </path>
+                                        </svg>
+                                        Home </a>
+                                </li>
+                                <!-- <li class="mt-0.5"><a
                                         class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
                                         href="/pricing.php">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24"
@@ -99,49 +124,75 @@
                                               d="M13 9h8L11 24v-9H4l9-15v9zm-2 2V7.22L7.532 13H13v4.394L17.263 11H11z"/>
                                     </svg>
                                     Pricing </a></li>-->
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/insights.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
-                                        <path fill="currentColor" d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z"></path>
-                                    </svg>
-                                    Insights </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/about.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                    </svg>
-                                    About </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/faq.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"></path>
-                                    </svg>
-                                    FAQs </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/affiliate.php">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"></path>
-                                    </svg>
-                                    Affiliate </a></li>
-                        </ul>
-                    </nav>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/payout.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
+                                            <path fill="currentColor"
+                                                d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z">
+                                            </path>
+                                        </svg>
+                                        Insights </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/about.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z">
+                                            </path>
+                                        </svg>
+                                        About </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/faq.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z">
+                                            </path>
+                                        </svg>
+                                        FAQs </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/affiliate.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z">
+                                            </path>
+                                        </svg>
+                                        Affiliate </a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-            <div class="hidden xl:flex items-center">
-                <a href="/" class="block"><img src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light ml-4 mr-2.5" width="22" height="22" viewBox="0 0 29.302 25.519">
-                    <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
-                </svg>
-                <nav>
-                    <ul class="flex text-gray">
-                        <li>
-                            <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold" href="/">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z"></path>
-                                </svg>
-                                Home </a></li>
-                      <!--  <li class="ml-2"><a
+                <div class="hidden xl:flex items-center">
+                    <a href="/" class="block"><img src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light ml-4 mr-2.5" width="22" height="22"
+                        viewBox="0 0 29.302 25.519">
+                        <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
+                    </svg>
+                    <nav>
+                        <ul class="flex text-gray">
+                            <li>
+                                <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold"
+                                    href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z">
+                                        </path>
+                                    </svg>
+                                    Home </a>
+                            </li>
+                            <!--  <li class="ml-2"><a
                                     class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
                                     href="/pricing.php">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24"
@@ -151,138 +202,207 @@
                                           d="M13 9h8L11 24v-9H4l9-15v9zm-2 2V7.22L7.532 13H13v4.394L17.263 11H11z"/>
                                 </svg>
                                 Pricing </a></li>-->
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/insights.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
-                                    <path fill="currentColor" d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z"></path>
-                                </svg>
-                                Insights </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/about.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                </svg>
-                                About </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/faq.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"></path>
-                                </svg>
-                                FAQs </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/affiliate.php">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"></path>
-                                </svg>
-                                Affiliate </a></li>
-                    </ul>
-                </nav>
-                                <nav class="ml-auto flex items-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light mr-4 ml-2.5" width="22" height="22" viewBox="0 0 29.302 25.519">
-                        <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
-                    </svg>
-                    <a href="/login.php" class="bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24" width="22" height="22">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z"></path>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/payout.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
+                                        <path fill="currentColor"
+                                            d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z">
+                                        </path>
+                                    </svg>
+                                    Insights </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/about.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z">
+                                        </path>
+                                    </svg>
+                                    About </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/faq.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z">
+                                        </path>
+                                    </svg>
+                                    FAQs </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/affiliate.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z">
+                                        </path>
+                                    </svg>
+                                    Affiliate </a></li>
+                        </ul>
+                    </nav>
+                    <nav class="ml-auto flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light mr-4 ml-2.5" width="22"
+                            height="22" viewBox="0 0 29.302 25.519">
+                            <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
                         </svg>
-                        Sign in </a>
+                        <a href="/login.html"
+                            class="bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24"
+                                width="22" height="22">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M4 15h2v5h12V4H6v5H4V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1v-6zm6-4V8l5 4-5 4v-3H2v-2h8z">
+                                </path>
+                            </svg>
+                            Sign in </a>
 
-						<a href="/register.php" class="ml-2 bg-green text-black hover:bg-green-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" viewBox="0 0 24 24" width="22" height="22">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z"></path>
-                        </svg>
-                        Sign up </a>
+                        <a href="/register.html"
+                            class="ml-2 bg-green text-black hover:bg-green-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" viewBox="0 0 24 24" width="22"
+                                height="22">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M4 3h16a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm1 2v14h14V5H5zm6 6V7h2v4h4v2h-4v4h-2v-4H7v-2h4z">
+                                </path>
+                            </svg>
+                            Sign up </a>
 
-                </nav>
-                
+                    </nav>
 
-                            </div>
+
+                </div>
+            </div>
         </div>
-    </div>
-    <script async="" src="js_1"></script>
-    <script> window.dataLayer = window.dataLayer || [];
+        <script async="" src="js_1"></script>
+        <script> window.dataLayer = window.dataLayer || [];
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
+            function gtag() {
+                dataLayer.push(arguments);
+            }
 
-        gtag('js', new Date());
-        gtag('config', 'G-7X3CC5H5S2');
+            gtag('js', new Date());
+            gtag('config', 'G-7X3CC5H5S2');
 
-    
-    </script>
-</header>
+
+        </script>
+    </header>
 
     <main>
         <div class="bg-headline bg-no-repeat bg-cover bg-center relative">
             <div class="bg-gradient-to-tr from-black-95 via-black-75 to-black-95">
-                <div class="2xl:container mx-auto px-4 py-14 lg:pl-28"><h1 class="font-serif font-black text-4xl sm:text-5xl text-white">About</h1></div>
+                <div class="2xl:container mx-auto px-4 py-14 lg:pl-28">
+                    <h1 class="font-serif font-black text-4xl sm:text-5xl text-white">About</h1>
+                </div>
             </div>
         </div>
         <div class="2xl:container mx-auto px-2 pt-14 lg:pt-28">
-            <div class="text-center mb-6"><img class="inline-block" src="images/web-logo.png" width="280" height="auto" alt="Logo"></div>
-            <div class="rounded-2xl bg-white shadow-xl p-6 md:p-10 mx-auto max-w-screen-md"><p class="text-black text-xl font-light italic text-center"> “Bitcoin is not only a currency of the future, but the revolution of traditional currencies and banking systems.”</p><img class="w-12 h-12 rounded-full mx-auto my-3" src="images/bnelson.jpg" alt="CEO Billy Nelson">
+            <div class="text-center mb-6"><img class="inline-block" src="images/web-logo.png" width="280" height="auto"
+                    alt="Logo"></div>
+            <div class="rounded-2xl bg-white shadow-xl p-6 md:p-10 mx-auto max-w-screen-md">
+                <p class="text-black text-xl font-light italic text-center"> “Bitcoin is not only a currency of the
+                    future, but the revolution of traditional currencies and banking systems.”</p><img
+                    class="w-12 h-12 rounded-full mx-auto my-3" src="images/bnelson.jpg" alt="CEO Billy Nelson">
                 <div class="text-green-dark text-center font-medium">— Billy Nelson, CEO of Bitcoin Bank</div>
             </div>
             <div class="grid grid-cols-4 max-w-screen-lg items-center mt-8 mx-auto text-center gap-4">
-                <div><img class="inline-block mx-auto" src="images/ssl.png" width="auto" height="56" alt="SSL Certified">
+                <div><img class="inline-block mx-auto" src="images/ssl.png" width="auto" height="56"
+                        alt="SSL Certified">
                     <div class="text-gray text-xs mt-4">SSL Certified Platform</div>
                 </div>
-                <div><img class="inline-block mx-auto" src="images/ukgov.png" width="100" height="auto" alt="UK Government">
+                <div><img class="inline-block mx-auto" src="images/ukgov.png" width="100" height="auto"
+                        alt="UK Government">
                     <div class="text-gray text-xs mt-4">UK Approved Company</div>
                 </div>
-                <div><img class="inline-block mx-auto" src="images/bca.png" width="100" height="auto" alt="Blockchain Association">
+                <div><img class="inline-block mx-auto" src="images/bca.png" width="100" height="auto"
+                        alt="Blockchain Association">
                     <div class="text-gray text-xs mt-4">Member of the<br>Blockchain Association</div>
                 </div>
-                <div><img class="inline-block mx-auto" src="images/tfc.png" width="100" height="100" alt="The Financial Commission">
+                <div><img class="inline-block mx-auto" src="images/tfc.png" width="100" height="100"
+                        alt="The Financial Commission">
                     <div class="text-gray text-xs mt-4">Associated with the Financial Commission</div>
                 </div>
             </div>
         </div>
         <div class="2xl:container mx-auto px-2 pt-14 lg:pt-28">
             <div class="text-black text-lg font-medium leading-none text-center">Be part of the revolution</div>
-            <h2 class="text-black font-serif font-black text-4xl leading-none mb-8 text-center">Our vision of true <span class="text-green">computing power</span></h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 xl:gap-24 text-gray text-justify leading-relaxed"><p>Unlike paper money, Bitcoin and other cryptocurrencies are generated mathematically. Our cloud miners provide the computing power needed to generate new Bitcoins and secure the Bitcoin network. Bitcoins are not managed by any central government or banks that decide the future of the system. The Bitcoin system offers freedom. Freedom that we want to make available and easily accessible to everyone. Today, Bitcoin is the most secure computer network on the planet, almost impenetrable! The reason for this is hash power.</p>
-                <p>BTC Bank is committed to creating maximum value for investors. Our bank technicians realize automatic trading through exchange spread capture. Through fund hedging, all-round investment is made through upgraded mining technology. Let users' idle funds get full value output.Let you really realize that you can make money while lying down. Our platform is based on decentralized services. Pursue the goal of achieving common prosperity.</p></div>
+            <h2 class="text-black font-serif font-black text-4xl leading-none mb-8 text-center">Our vision of true <span
+                    class="text-green">computing power</span></h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12 xl:gap-24 text-gray text-justify leading-relaxed">
+                <p>Unlike paper money, Bitcoin and other cryptocurrencies are generated mathematically. Our cloud miners
+                    provide the computing power needed to generate new Bitcoins and secure the Bitcoin network. Bitcoins
+                    are not managed by any central government or banks that decide the future of the system. The Bitcoin
+                    system offers freedom. Freedom that we want to make available and easily accessible to everyone.
+                    Today, Bitcoin is the most secure computer network on the planet, almost impenetrable! The reason
+                    for this is hash power.</p>
+                <p>BTC Bank is committed to creating maximum value for investors. Our bank technicians realize automatic
+                    trading through exchange spread capture. Through fund hedging, all-round investment is made through
+                    upgraded mining technology. Let users' idle funds get full value output.Let you really realize that
+                    you can make money while lying down. Our platform is based on decentralized services. Pursue the
+                    goal of achieving common prosperity.</p>
+            </div>
         </div>
         <div class="2xl:container mx-auto px-2 py-14 lg:py-28 grid grid-cols-1 xl:grid-cols-2 gap-10 items-center">
             <div>
-                <iframe loading="lazy" width="576" height="324" class="mx-auto rounded-2xl shadow-xl w-full max-w-xl block" src="embed.html" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <iframe loading="lazy" width="576" height="324"
+                    class="mx-auto rounded-2xl shadow-xl w-full max-w-xl block" src="embed.html" frameborder="0"
+                    style="border:0;" allowfullscreen=""></iframe>
             </div>
             <div class="max-w-xl mx-auto xl:mx-0 xl:max-w-none">
                 <div class="text-black text-lg font-medium leading-none">Need help or have questions?</div>
-                <h2 class="text-black font-serif font-black text-4xl leading-none mt-1 mb-4">Get <span class="text-green">in touch</span>with us</h2>
-                <p class="leading-relaxed text-gray"><strong>Support email address:</strong><br> <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d5a6a0a5a5baa7a19597bca1b6babcbb">[email&nbsp;protected]</a> Bank.io
-                    <br><strong>Mailing address:</strong><br> Bitcoin Bank Ltd. 185 Gloucester Place, London England, NW1 6BU                </p><a href="/faq.php" class="mt-6 mr-4 shadow text-lg bg-black text-white hover:bg-black-dark rounded py-2 px-6 inline-flex items-center justify-center">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-yellow" viewBox="0 0 24 24" width="24" height="24">
+                <h2 class="text-black font-serif font-black text-4xl leading-none mt-1 mb-4">Get <span
+                        class="text-green">in touch</span>with us</h2>
+                <p class="leading-relaxed text-gray"><strong>Support email address:</strong><br> <a
+                        href="/cdn-cgi/l/email-protection" class="__cf_email__"
+                        data-cfemail="d5a6a0a5a5baa7a19597bca1b6babcbb">[email&nbsp;protected]</a> Bank.io
+                    <br><strong>Mailing address:</strong><br> Bitcoin Bank Ltd. 185 Gloucester Place, London England,
+                    NW1 6BU
+                </p><a href="/faq.html"
+                    class="mt-6 mr-4 shadow text-lg bg-black text-white hover:bg-black-dark rounded py-2 px-6 inline-flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="mr-2 text-yellow" viewBox="0 0 24 24" width="24"
+                        height="24">
                         <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"></path>
+                        <path fill="currentColor"
+                            d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z">
+                        </path>
                     </svg>
-                    FAQs  </a></div>
+                    FAQs </a>
+            </div>
         </div>
     </main>
 
 
-<footer class="hidden md:block bg-white absolute inset-x-0 bottom-0 border-t border-gray-light">
-    <div class="2xl:container mx-auto px-2 py-6 text-center"><a href="/" class="inline-block mb-2"><img src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
-        <ul class="leading-loose max-w-md mx-auto text-gray text-sm">
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/">Home</a></li>
-           <!-- <li class="inline-block mx-1.5"><a class="hover:text-black" href="/pricing.php">Pricing</a></li>-->
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/affiliate.php">Affiliate</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/faq.php">FAQs</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/about.php">About</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/antifraud.php">Anti Fraud</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/terms.php">Terms of Service</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/insights.php">Insights</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/login.php">Sign in</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/forgot-password.php">Forgot password?</a></li>
-            <li class="inline-block mx-1.5"><a class="hover:text-black" href="/register.php">Sign up</a></li>
-        </ul>
-        <p class="text-black text-xs mt-4">Copyright © 2022 BTCBank</p></div>
-</footer>
-<script data-cfasync="false" src="js/email-decode.min.js"></script><script src="js/script.js" async=""></script>
-<script>(function(){var js = "window['__CF$cv$params']={r:'7bc755975a5f1aff',m:'6S0oRG5dSTL50.TjjJBZoI4iHLqE2MLTIflgY6Lrh3M-1682265783-0-ATNAx0E9lre8gC32m77PlzWP4hHEVEe6TkEoaykAzb6D',u:'/cdn-cgi/challenge-platform/h/g'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script>
+    <footer class="hidden md:block bg-white absolute inset-x-0 bottom-0 border-t border-gray-light">
+        <div class="2xl:container mx-auto px-2 py-6 text-center"><a href="/" class="inline-block mb-2"><img
+                    src="images/web-logo.png" style="height: 40px;" alt="Logo"></a>
+            <ul class="leading-loose max-w-md mx-auto text-gray text-sm">
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/">Home</a></li>
+                <!-- <li class="inline-block mx-1.5"><a class="hover:text-black" href="/pricing.php">Pricing</a></li>-->
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/affiliate.html">Affiliate</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/faq.html">FAQs</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/about.html">About</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/anti-fraud.html">Anti Fraud</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/terms.html">Terms of Service</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/payout.html">Insights</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/login.html">Sign in</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/forgot-password.html">Forgot
+                        password?</a></li>
+                <li class="inline-block mx-1.5"><a class="hover:text-black" href="/register.html">Sign up</a></li>
+            </ul>
+            <p class="text-black text-xs mt-4">Copyright © 2022 BTCBank</p>
+        </div>
+    </footer>
+    <script data-cfasync="false" src="js/email-decode.min.js"></script>
+    <script src="js/script.js" async=""></script>
+    <script>(function () { var js = "window['__CF$cv$params']={r:'7bc755975a5f1aff',m:'6S0oRG5dSTL50.TjjJBZoI4iHLqE2MLTIflgY6Lrh3M-1682265783-0-ATNAx0E9lre8gC32m77PlzWP4hHEVEe6TkEoaykAzb6D',u:'/cdn-cgi/challenge-platform/h/g'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);"; var _0xh = document.createElement('iframe'); _0xh.height = 1; _0xh.width = 1; _0xh.style.position = 'absolute'; _0xh.style.top = 0; _0xh.style.left = 0; _0xh.style.border = 'none'; _0xh.style.visibility = 'hidden'; document.body.appendChild(_0xh); function handler() { var _0xi = _0xh.contentDocument || _0xh.contentWindow.document; if (_0xi) { var _0xj = _0xi.createElement('script'); _0xj.nonce = ''; _0xj.innerHTML = js; _0xi.getElementsByTagName('head')[0].appendChild(_0xj); } } if (document.readyState !== 'loading') { handler(); } else if (window.addEventListener) { document.addEventListener('DOMContentLoaded', handler); } else { var prev = document.onreadystatechange || function () { }; document.onreadystatechange = function (e) { prev(e); if (document.readyState !== 'loading') { document.onreadystatechange = prev; handler(); } }; } })();</script>
 
-</body></html>
+</body>
+
+</html>
