@@ -3,7 +3,9 @@ async function Register () {
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('pass').value;
-        const referralCode = localStorage.getItem('refCode');
+        const referralCode = document.getElementById('refCode').value;
+
+        console.log(typeof(referralCode));
 
         const data = {
             name,
@@ -12,7 +14,7 @@ async function Register () {
             referralCode,
         }
 
-        const url = 'https://jwhite.onrender.com/api/user/register';
+        const url = 'http://localhost:5000/api/user/register';
         const req = await fetch(url, {
             method: 'POST',
             body: JSON.stringify(data),
@@ -20,10 +22,18 @@ async function Register () {
                 'Content-Type': 'application/json',
                 'Accept': 'application/json',
             },
-    });
+        });
 
-    const res = await req.json();
-    console.log(res);
+        const res = await req.json();
+        console.log(res);
+
+        if (req.status !== 200) {
+            alert(res.msg);
+            document.location.reload();
+        } else {
+            localStorage.setItem('token', res.token);
+            document.location.href = '/dash.html';
+        };
     } catch (error) {
         console.log(error);
     }
@@ -32,13 +42,15 @@ async function Register () {
 
 async function Login () {
     try {
-        const email = document.getElementById('email');
-        const password = document.getElementById('pass');
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('pass').value;
 
         const data = {
             email,
             password,
         };
+
+        console.log(data);
 
         const url = 'http://localhost:5000/api/user/login'
 
@@ -54,9 +66,15 @@ async function Login () {
 
         const res = await req.json();
         console.log(res);
+
+        if (req.status !== 200) {
+            alert(res.msg);
+            document.location.reload();
+        } else {
+            localStorage.setItem('token', res.token);
+            document.location.href = '/dash.html';
+        };
     } catch (error) {
         console.log(error);
     }
 };
-
-console.log('Working...')

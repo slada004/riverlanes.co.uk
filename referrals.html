@@ -1,4 +1,7 @@
-<!DOCTYPE html><html lang="en"><head>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,83 +28,108 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="sweetalert2%4011"></script>
 </head>
-<body class="bg-white-dark relative min-h-screen">
-<header class="sticky top-0 shadow-md z-10">
-    <div class="bg-black" style="display:none;">
-        <div class="2xl:container mx-auto flex items-center justify-between py-1.5 px-2">
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow" viewBox="0 0 24 24" width="22" height="22">
-                    <path fill="none" d="M0 0h24v24H0z"></path>
-                    <path fill="currentColor" d="M17 16h2V4H9v2h8v10zm0 2v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3zM7 16v2h2v1h2v-1h.5a2.5 2.5 0 1 0 0-5h-3a.5.5 0 1 1 0-1H13v-2h-2V9H9v1h-.5a2.5 2.5 0 1 0 0 5h3a.5.5 0 1 1 0 1H7z"></path>
-                </svg>
-            </div>
-            <ul class="lg:flex text-white text-xs items-center justify-center">
-                <li class="px-4">1 BTC = 12077214 �</li>
-                <!--                <li class="px-4">1 BTC = 43641.72 EUR</li>-->
-                <!--                <li class="px-4">1 BTC = 37155.98 GBP</li>-->
-                <!--                <li class="px-4">1 BTC = 3722317.63 INR</li>-->
-                <!--                <li class="px-4">1 BTC = 3651148.70 RUB</li>-->
-            </ul>
-            <div><select class="setcurrency bg-black hover:bg-black-dark focus:bg-black-dark w-24 rounded-sm py-1 px-3 cursor-pointer text-sm text-white border border-white" title="Choose your currency">
-                    <option value="btc" selected="">BTC</option>
-                    <option value="usd">NGN</option>
-                    <!--                    <option value="eur">EUR</option>-->
-                    <!--                    <option value="gbp">GBP</option>-->
-                    <!--                    <option value="inr">INR</option>-->
-                    <!--                    <option value="rub">RUB</option>-->
-                </select></div>
-        </div>
-    </div>
-    <div class="bg-white">
-        <div class="2xl:container mx-auto py-3 xl:py-6 px-2 leading-none relative">
-            <div class="flex items-center justify-between xl:hidden">
-                                <button id="openAccountMenu" class="h-full rounded-br flex justify-start items-center flex-col md:hidden bg-white hover:bg-white-dark text-black shadow-lg px-2">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0H24V24H0z"></path>
-                        <path fill="currentColor" d="M21 18v2H3v-2h18zM17.404 3.904L22 8.5l-4.596 4.596-1.414-1.414L19.172 8.5 15.99 5.318l1.414-1.414zM12 11v2H3v-2h9zm0-7v2H3V4h9z"></path>
-                    </svg>
-                    <div class="text-black text-xs mt-1">Menu</div>
-                </button>
-                                <a href="/" class="block"><img src="images/GRI.png" style="height: 90px;" alt="Logo"></a>
-                <button class="p-2 rounded-sm hover:bg-white-dark text-black toggle" data-target="mobileMenu" type="button">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z"></path>
-                    </svg>
-                </button>
-                <div id="mobileMenu" class="bg-white absolute inset-x-0 top-full shadow-md" hidden="">
-                    <nav class="grid grid-cols-2 gap-2">
 
-                                                                            <ul class="flex flex-col items-start text-black text-sm pl-2 pb-2">
-                                <li class="w-36"><a class="inline-flex w-full items-center py-1.5 px-2 rounded text-white bg-black hover:bg-black-dark" href="/dash.html">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-1.5" viewBox="0 0 24 24" width="22" height="22">
+<body class="bg-white-dark relative min-h-screen">
+    <header class="sticky top-0 shadow-md z-10">
+        <div class="bg-black" style="display:none;">
+            <div class="2xl:container mx-auto flex items-center justify-between py-1.5 px-2">
+                <div>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow" viewBox="0 0 24 24" width="22"
+                        height="22">
+                        <path fill="none" d="M0 0h24v24H0z"></path>
+                        <path fill="currentColor"
+                            d="M17 16h2V4H9v2h8v10zm0 2v3c0 .552-.45 1-1.007 1H4.007A1.001 1.001 0 0 1 3 21l.003-14c0-.552.45-1 1.007-1H7V3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1h-3zM7 16v2h2v1h2v-1h.5a2.5 2.5 0 1 0 0-5h-3a.5.5 0 1 1 0-1H13v-2h-2V9H9v1h-.5a2.5 2.5 0 1 0 0 5h3a.5.5 0 1 1 0 1H7z">
+                        </path>
+                    </svg>
+                </div>
+                <ul class="lg:flex text-white text-xs items-center justify-center">
+                    <li class="px-4">1 BTC = 12077214 �</li>
+                    <!--                <li class="px-4">1 BTC = 43641.72 EUR</li>-->
+                    <!--                <li class="px-4">1 BTC = 37155.98 GBP</li>-->
+                    <!--                <li class="px-4">1 BTC = 3722317.63 INR</li>-->
+                    <!--                <li class="px-4">1 BTC = 3651148.70 RUB</li>-->
+                </ul>
+                <div><select
+                        class="setcurrency bg-black hover:bg-black-dark focus:bg-black-dark w-24 rounded-sm py-1 px-3 cursor-pointer text-sm text-white border border-white"
+                        title="Choose your currency">
+                        <option value="btc" selected="">BTC</option>
+                        <option value="usd">NGN</option>
+                        <!--                    <option value="eur">EUR</option>-->
+                        <!--                    <option value="gbp">GBP</option>-->
+                        <!--                    <option value="inr">INR</option>-->
+                        <!--                    <option value="rub">RUB</option>-->
+                    </select></div>
+            </div>
+        </div>
+        <div class="bg-white">
+            <div class="2xl:container mx-auto py-3 xl:py-6 px-2 leading-none relative">
+                <div class="flex items-center justify-between xl:hidden">
+                    <button id="openAccountMenu"
+                        class="h-full rounded-br flex justify-start items-center flex-col md:hidden bg-white hover:bg-white-dark text-black shadow-lg px-2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0H24V24H0z"></path>
+                            <path fill="currentColor"
+                                d="M21 18v2H3v-2h18zM17.404 3.904L22 8.5l-4.596 4.596-1.414-1.414L19.172 8.5 15.99 5.318l1.414-1.414zM12 11v2H3v-2h9zm0-7v2H3V4h9z">
+                            </path>
+                        </svg>
+                        <div class="text-black text-xs mt-1">Menu</div>
+                    </button>
+                    <a href="/" class="block"><img src="images/GRI.png" style="height: 90px;" alt="Logo"></a>
+                    <button class="p-2 rounded-sm hover:bg-white-dark text-black toggle" data-target="mobileMenu"
+                        type="button">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor" d="M3 4h18v2H3V4zm0 7h12v2H3v-2zm0 7h18v2H3v-2z"></path>
+                        </svg>
+                    </button>
+                    <div id="mobileMenu" class="bg-white absolute inset-x-0 top-full shadow-md" hidden="">
+                        <nav class="grid grid-cols-2 gap-2">
+
+                            <ul class="flex flex-col items-start text-black text-sm pl-2 pb-2">
+                                <li class="w-36"><a
+                                        class="inline-flex w-full items-center py-1.5 px-2 rounded text-white bg-black hover:bg-black-dark"
+                                        href="/dash.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
                                             <path fill="none" d="M0 0h24v24H0z"></path>
-                                            <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                                            <path fill="currentColor"
+                                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z">
+                                            </path>
                                         </svg>
                                         Dashboard </a></li>
                                 <li class="w-36 mt-0.5">
 
-								<a class="inline-flex w-full items-center py-1.5 px-2 rounded text-black bg-green hover:bg-green-dark" href="/logout.html">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5" viewBox="0 0 24 24" width="22" height="22">
+                                    <a class="inline-flex w-full items-center py-1.5 px-2 rounded text-black bg-green hover:bg-green-dark"
+                                        href="/logout.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="mr-1.5" viewBox="0 0 24 24"
+                                            width="22" height="22">
                                             <path fill="none" d="M0 0h24v24H0z"></path>
-                                            <path fill="currentColor" d="M5 22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3h-2V4H6v16h12v-2h2v3a1 1 0 0 1-1 1H5zm13-6v-3h-7v-2h7V8l5 4-5 4z"></path>
+                                            <path fill="currentColor"
+                                                d="M5 22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3h-2V4H6v16h12v-2h2v3a1 1 0 0 1-1 1H5zm13-6v-3h-7v-2h7V8l5 4-5 4z">
+                                            </path>
                                         </svg>
-                                        Sign out </a></li>
+                                        Sign out </a>
+                                </li>
 
 
                             </ul>
 
 
-                        
-                        <ul class="flex flex-col items-end text-gray text-sm pr-4 pb-2">
-                            <li>
-                                <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold" href="/">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z"></path>
-                                    </svg>
-                                    Home </a></li>
-                           <!-- <li class="mt-0.5"><a
+
+                            <ul class="flex flex-col items-end text-gray text-sm pr-4 pb-2">
+                                <li>
+                                    <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold"
+                                        href="/">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z">
+                                            </path>
+                                        </svg>
+                                        Home </a>
+                                </li>
+                                <!-- <li class="mt-0.5"><a
                                         class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
                                         href="/pricing.php">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24"
@@ -111,49 +139,75 @@
                                               d="M13 9h8L11 24v-9H4l9-15v9zm-2 2V7.22L7.532 13H13v4.394L17.263 11H11z"/>
                                     </svg>
                                     Pricing </a></li>-->
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/payout.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
-                                        <path fill="currentColor" d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z"></path>
-                                    </svg>
-                                    Insights </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/about.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                    </svg>
-                                    About </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/faq.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"></path>
-                                    </svg>
-                                    FAQs </a></li>
-                            <li class="mt-0.5"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/affiliate.html">
-                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                        <path fill="none" d="M0 0h24v24H0z"></path>
-                                        <path fill="currentColor" d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"></path>
-                                    </svg>
-                                    Affiliate </a></li>
-                        </ul>
-                    </nav>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/payout.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
+                                            <path fill="currentColor"
+                                                d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z">
+                                            </path>
+                                        </svg>
+                                        Insights </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/about.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z">
+                                            </path>
+                                        </svg>
+                                        About </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/faq.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z">
+                                            </path>
+                                        </svg>
+                                        FAQs </a></li>
+                                <li class="mt-0.5"><a
+                                        class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                        href="/affiliate.html">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                            viewBox="0 0 24 24" width="22" height="22">
+                                            <path fill="none" d="M0 0h24v24H0z"></path>
+                                            <path fill="currentColor"
+                                                d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z">
+                                            </path>
+                                        </svg>
+                                        Affiliate </a></li>
+                            </ul>
+                        </nav>
+                    </div>
                 </div>
-            </div>
-            <div class="hidden xl:flex items-center">
-                <a href="/" class="block"><img src="images/GRI.png" style="height: 90px;" alt="Logo"></a>
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light ml-4 mr-2.5" width="22" height="22" viewBox="0 0 29.302 25.519">
-                    <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
-                </svg>
-                <nav>
-                    <ul class="flex text-gray">
-                        <li>
-                            <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold" href="/">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z"></path>
-                                </svg>
-                                Home </a></li>
-                      <!--  <li class="ml-2"><a
+                <div class="hidden xl:flex items-center">
+                    <a href="/" class="block"><img src="images/GRI.png" style="height: 90px;" alt="Logo"></a>
+                    <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light ml-4 mr-2.5" width="22" height="22"
+                        viewBox="0 0 29.302 25.519">
+                        <line x1="28" y2="24" fill="none" stroke="currentColor" stroke-width="2"></line>
+                    </svg>
+                    <nav>
+                        <ul class="flex text-gray">
+                            <li>
+                                <a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold"
+                                    href="/">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M19 21H5a1 1 0 0 1-1-1v-9H1l10.327-9.388a1 1 0 0 1 1.346 0L23 11h-3v9a1 1 0 0 1-1 1zm-6-2h5V9.157l-6-5.454-6 5.454V19h5v-6h2v6z">
+                                        </path>
+                                    </svg>
+                                    Home </a>
+                            </li>
+                            <!--  <li class="ml-2"><a
                                     class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
                                     href="/pricing.php">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24"
@@ -163,259 +217,431 @@
                                           d="M13 9h8L11 24v-9H4l9-15v9zm-2 2V7.22L7.532 13H13v4.394L17.263 11H11z"/>
                                 </svg>
                                 Pricing </a></li>-->
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/payout.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
-                                    <path fill="currentColor" d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z"></path>
-                                </svg>
-                                Insights </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/about.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z"></path>
-                                </svg>
-                                About </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/faq.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z"></path>
-                                </svg>
-                                FAQs </a></li>
-                        <li class="ml-2"><a class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black" href="/affiliate.html">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5" viewBox="0 0 24 24" width="22" height="22">
-                                    <path fill="none" d="M0 0h24v24H0z"></path>
-                                    <path fill="currentColor" d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z"></path>
-                                </svg>
-                                Affiliate </a></li>
-                    </ul>
-                </nav>
-                
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/payout.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0L24 0 24 24 0 24z"></path>
+                                        <path fill="currentColor"
+                                            d="M16 16c1.657 0 3 1.343 3 3s-1.343 3-3 3-3-1.343-3-3 1.343-3 3-3zM6 12c2.21 0 4 1.79 4 4s-1.79 4-4 4-4-1.79-4-4 1.79-4 4-4zm10 6c-.552 0-1 .448-1 1s.448 1 1 1 1-.448 1-1-.448-1-1-1zM6 14c-1.105 0-2 .895-2 2s.895 2 2 2 2-.895 2-2-.895-2-2-2zm8.5-12C17.538 2 20 4.462 20 7.5S17.538 13 14.5 13 9 10.538 9 7.5 11.462 2 14.5 2zm0 2C12.567 4 11 5.567 11 7.5s1.567 3.5 3.5 3.5S18 9.433 18 7.5 16.433 4 14.5 4z">
+                                        </path>
+                                    </svg>
+                                    Insights </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/about.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zM11 7h2v2h-2V7zm0 4h2v6h-2v-6z">
+                                        </path>
+                                    </svg>
+                                    About </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/faq.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M5.763 17H20V5H4v13.385L5.763 17zm.692 2L2 22.5V4a1 1 0 0 1 1-1h18a1 1 0 0 1 1 1v14a1 1 0 0 1-1 1H6.455zM11 14h2v2h-2v-2zM8.567 8.813A3.501 3.501 0 1 1 12 13h-1v-2h1a1.5 1.5 0 1 0-1.471-1.794l-1.962-.393z">
+                                        </path>
+                                    </svg>
+                                    FAQs </a></li>
+                            <li class="ml-2"><a
+                                    class="inline-flex items-center py-1.5 px-2 rounded-sm hover:bg-white-dark hover:text-black"
+                                    href="/affiliate.html">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-1.5"
+                                        viewBox="0 0 24 24" width="22" height="22">
+                                        <path fill="none" d="M0 0h24v24H0z"></path>
+                                        <path fill="currentColor"
+                                            d="M18.364 15.536L16.95 14.12l1.414-1.414a5 5 0 1 0-7.071-7.071L9.879 7.05 8.464 5.636 9.88 4.222a7 7 0 0 1 9.9 9.9l-1.415 1.414zm-2.828 2.828l-1.415 1.414a7 7 0 0 1-9.9-9.9l1.415-1.414L7.05 9.88l-1.414 1.414a5 5 0 1 0 7.071 7.071l1.414-1.414 1.415 1.414zm-.708-10.607l1.415 1.415-7.071 7.07-1.415-1.414 7.071-7.07z">
+                                        </path>
+                                    </svg>
+                                    Affiliate </a></li>
+                        </ul>
+                    </nav>
 
-                                    <nav class="ml-auto flex items-center">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light mr-4 ml-2.5" width="22" height="22" viewBox="0 0 29.302 25.519">
-                            <line x1="28" y2="24" transform="translate(0.651 0.759)" fill="none" stroke="currentColor" stroke-width="2"></line>
+
+                    <nav class="ml-auto flex items-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-gray-light mr-4 ml-2.5" width="22"
+                            height="22" viewBox="0 0 29.302 25.519">
+                            <line x1="28" y2="24" transform="translate(0.651 0.759)" fill="none" stroke="currentColor"
+                                stroke-width="2"></line>
                         </svg>
-                        <a href="/dash.html" class="bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24" width="22" height="22">
+                        <a href="/dash.html"
+                            class="bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-yellow mr-2" viewBox="0 0 24 24"
+                                width="22" height="22">
                                 <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path>
+                                <path fill="currentColor"
+                                    d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z">
+                                </path>
                             </svg>
                             Dashboard </a>
 
-							<a href="/logout.html" class="ml-2 bg-green text-black hover:bg-green-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" viewBox="0 0 24 24" width="22" height="22">
+                        <a href="/logout.html"
+                            class="ml-2 bg-green text-black hover:bg-green-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="mr-2" viewBox="0 0 24 24" width="22"
+                                height="22">
                                 <path fill="none" d="M0 0h24v24H0z"></path>
-                                <path fill="currentColor" d="M5 22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3h-2V4H6v16h12v-2h2v3a1 1 0 0 1-1 1H5zm13-6v-3h-7v-2h7V8l5 4-5 4z"></path>
+                                <path fill="currentColor"
+                                    d="M5 22a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v3h-2V4H6v16h12v-2h2v3a1 1 0 0 1-1 1H5zm13-6v-3h-7v-2h7V8l5 4-5 4z">
+                                </path>
                             </svg>
                             Sign out </a>
 
                     </nav>
-                            </div>
-        </div>
-    </div>
-    <script async="" src="js_1"></script>
-    <script> window.dataLayer = window.dataLayer || [];
-
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-
-        gtag('js', new Date());
-        gtag('config', 'G-7X3CC5H5S2');
-
-    
-    </script>
-</header>
-<style>
-    .btn{
-        border: none;
-        box-shadow: none;
-        font-weight: 500;
-        display: inline-block;
-        line-height: 1;
-        color: #6e6b7b;
-        text-align: center;
-        vertical-align: middle;
-        cursor: pointer;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        background-color: transparent;
-        padding: .786rem 1.5rem;
-        font-size: 1rem;
-        border-radius: .358rem;
-        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out,background 0s,border 0s;
-    }
-</style>
-<div class="account-menu flex flex-row w-full">
-    
-<div id="accountMenu" class="z-10 fixed h-full md:static hidden md:block w-56 md:w-72 bg-white py-14 px-3 md:px-8 shadow-2xl md:shadow-none">
-    <button id="closeAccountMenu" class="inline-block absolute top-3 right-3 md:hidden p-1.5 p-2 rounded-sm hover:bg-white-dark text-black">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z"></path></svg>
-    </button>
-    <ul>
-        <li>
-            <a class="flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/dash.html">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-green mr-3" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z"></path></svg>
-                Dashboard </a></li>
-        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/invest.html">
-                <svg class="text-green mr-3" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 128 128" style="fill: #26e07f;"><path d="M 24 1 C 11.32 1 1 11.32 1 24 L 1 84 C 1 96.68 11.32 107 24 107 L 78 107 C 79.66 107 81 105.66 81 104 C 81 102.34 79.66 101 78 101 L 24 101 C 14.63 101 7 93.37 7 84 L 7 47 L 121 47 L 121 66 C 121 67.66 122.34 69 124 69 C 125.66 69 127 67.66 127 66 L 127 24 C 127 11.32 116.68 1 104 1 L 24 1 z M 24 7 L 104 7 C 112.35 7 119.3007 13.05 120.7207 21 L 7.2792969 21 C 8.6992969 13.05 15.65 7 24 7 z M 7 27 L 121 27 L 121 41 L 7 41 L 7 27 z M 92 61 C 90.34 61 89 62.34 89 64 L 89 71 L 86 71 C 84.34 71 83 72.34 83 74 C 83 75.66 84.34 77 86 77 L 89 77 L 89 111 L 86 111 C 84.34 111 83 112.34 83 114 C 83 115.66 84.34 117 86 117 L 89 117 L 89 124 C 89 125.66 90.34 127 92 127 C 93.66 127 95 125.66 95 124 L 95 117 L 103 117 L 103 124 C 103 125.66 104.34 127 106 127 C 107.66 127 109 125.66 109 124 L 109 117 L 114 117 C 121.17 117 127 111.17 127 104 C 127 98.37 123.40062 93.589297 118.39062 91.779297 C 120.02062 89.609297 121 86.92 121 84 C 121 77.17 115.7 71.560781 109 71.050781 L 109 64 C 109 62.34 107.66 61 106 61 C 104.34 61 103 62.34 103 64 L 103 71 L 95 71 L 95 64 C 95 62.34 93.66 61 92 61 z M 95 77 L 108 77 C 111.86 77 115 80.14 115 84 C 115 87.86 111.86 91 108 91 L 95 91 L 95 77 z M 19 81 C 17.34 81 16 82.34 16 84 C 16 85.66 17.34 87 19 87 L 49 87 C 50.66 87 52 85.66 52 84 C 52 82.34 50.66 81 49 81 L 19 81 z M 69 81 C 67.34 81 66 82.34 66 84 C 66 85.66 67.34 87 69 87 L 79 87 C 80.66 87 82 85.66 82 84 C 82 82.34 80.66 81 79 81 L 69 81 z M 95 97 L 108 97 L 114 97 C 117.86 97 121 100.14 121 104 C 121 107.86 117.86 111 114 111 L 95 111 L 95 97 z"></path></svg>
-                Invest </a></li>
-        <!--<li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "-->
-        <!--       href="/manager.php">-->
-        <!--        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-green mr-3 bi inline-block bi-award-fill" viewBox="0 0 16 16"><path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/><path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/></svg>-->
-        <!--        account Manager </a></li>-->
-                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/recharge.html">
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z"></path></svg>
-                Withdraw </a></li>
-        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold" href="/referrals.html">
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z"></path></svg>
-                Earn commission </a></li>
-        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/contact.html">
-                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green mr-3" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"></path>
-                </svg>
-                Contact us </a></li>
-<!--        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black"-->
-<!--               href="--><!--" target="_blank">-->
-<!--                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3"  viewBox="0 0 24 24" width="24" height="24">-->
-<!--                    <path fill="none" d="M0 0h24v24H0z"></path>-->
-<!--                    <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>-->
-<!--                </svg>-->
-<!--                --><!-- </a></li>-->
-        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black " href="/setting.html">
-                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M3.34 17a10.018 10.018 0 0 1-.978-2.326 3 3 0 0 0 .002-5.347A9.99 9.99 0 0 1 4.865 4.99a3 3 0 0 0 4.631-2.674 9.99 9.99 0 0 1 5.007.002 3 3 0 0 0 4.632 2.672c.579.59 1.093 1.261 1.525 2.01.433.749.757 1.53.978 2.326a3 3 0 0 0-.002 5.347 9.99 9.99 0 0 1-2.501 4.337 3 3 0 0 0-4.631 2.674 9.99 9.99 0 0 1-5.007-.002 3 3 0 0 0-4.632-2.672A10.018 10.018 0 0 1 3.34 17zm5.66.196a4.993 4.993 0 0 1 2.25 2.77c.499.047 1 .048 1.499.001A4.993 4.993 0 0 1 15 17.197a4.993 4.993 0 0 1 3.525-.565c.29-.408.54-.843.748-1.298A4.993 4.993 0 0 1 18 12c0-1.26.47-2.437 1.273-3.334a8.126 8.126 0 0 0-.75-1.298A4.993 4.993 0 0 1 15 6.804a4.993 4.993 0 0 1-2.25-2.77c-.499-.047-1-.048-1.499-.001A4.993 4.993 0 0 1 9 6.803a4.993 4.993 0 0 1-3.525.565 7.99 7.99 0 0 0-.748 1.298A4.993 4.993 0 0 1 6 12c0 1.26-.47 2.437-1.273 3.334a8.126 8.126 0 0 0 .75 1.298A4.993 4.993 0 0 1 9 17.196zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"></path></svg>
-                Settings </a></li>
-    </ul>
-</div>
-<script> function toggleAccountMenu() {
-        var accountMenu = document.getElementById('accountMenu');
-        accountMenu.classList.toggle('hidden');
-    }
-
-    var openAccountMenu = document.getElementById('openAccountMenu');
-    openAccountMenu.addEventListener('click', toggleAccountMenu);
-    var closeAccountMenu = document.getElementById('closeAccountMenu');
-    closeAccountMenu.addEventListener('click', toggleAccountMenu);</script>    <div class="flex-1 overflow-y-auto">
-        <div class="xl:container mx-auto py-4 md:py-14 px-4 md:px-8"><h1 class="text-black font-bold text-3xl leading-none mb-6 pb-4 border-b-2 border-gray-light">
-                Partnering</h1>
-            <h2 class="text-black font-bold text-2xl leading-relaxed mb-3">Share with your friends or others to earn commissions to level up your vip</h2>
-            <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-8">
-                <div class="lg:col-span-2 mb-8">
-                    <div class="py-4 sm:py-6 pl-4 flex items-center bg-black rounded shadow-md">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3 flex-none" viewBox="0 0 24 24" width="32" height="32">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M13 9h8L11 24v-9H4l9-15v9zm-2 2V7.22L7.532 13H13v4.394L17.263 11H11z"></path>
-                        </svg>
-                        <div><h2 class="text-green font-medium text-sm leading-none mb-1">Referral commission</h2>
-                            <div class="text-base sm:text-xl text-white font-semibold leading-none"> 0.00000000 BTC</div>
-                        </div>
-                    </div>
-                    <div class="py-4 sm:py-6 pl-4 border-b-2 border-gray-light flex justify-between items-center">
-                        <div class="flex items-center">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3 flex-none" viewBox="0 0 24 24" width="32" height="32"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M2 22a8 8 0 1 1 16 0h-2a6 6 0 1 0-12 0H2zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm8.284 3.703A8.002 8.002 0 0 1 23 22h-2a6.001 6.001 0 0 0-3.537-5.473l.82-1.824zm-.688-11.29A5.5 5.5 0 0 1 21 8.5a5.499 5.499 0 0 1-5 5.478v-2.013a3.5 3.5 0 0 0 1.041-6.609l.555-1.943z"></path></svg>
-                            <div style="text-align:left;"><h2 class="text-black font-medium text-sm leading-none mb-1">Referrals</h2>
-                                <div class="text-base sm:text-xl text-green-dark font-semibold leading-none"> 0</div>
-                            </div>
-                        </div>
-
-                        <div class="ml-9 submit bg-black text-white hover:bg-black-dark rounded py-1.5 px-5" type="button" onclick="location.href='refuser.php'"> help and earn </div>
-
-
-                    </div>
                 </div>
-
-
-                <div class="lg:col-span-3 lg:pl-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
-                    </svg>
-                    Choose to click on the application icon below to send to your friends                </div>
-
-                <div class="lg:col-span-3 lg:pl-8">
-                    <div class="mt-2 flex justify-center f-wrap">
-                        <a style="background: rgb(3, 155, 228);" class="mx-1 mt-2 btn px-1" href="https://www.facebook.com/sharer/sharer.php?u=https://biticonsbank.com/3966708785892226202305040806&amp;quote=NEW SITE%0ASign up get 10$%0ADAILY+3%25-7%25+Interest%0AMinimum Withdrawal $10%0A" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50" style=" fill:#fff;"><path d="M 30.140625 2 C 26.870375 2 24.045399 2.9969388 22.0625 4.9667969 C 20.079601 6.936655 19 9.823825 19 13.367188 L 19 18 L 13 18 A 1.0001 1.0001 0 0 0 12 19 L 12 27 A 1.0001 1.0001 0 0 0 13 28 L 19 28 L 19 47 A 1.0001 1.0001 0 0 0 20 48 L 28 48 A 1.0001 1.0001 0 0 0 29 47 L 29 28 L 36 28 A 1.0001 1.0001 0 0 0 36.992188 27.125 L 37.992188 19.125 A 1.0001 1.0001 0 0 0 37 18 L 29 18 L 29 14 C 29 12.883334 29.883334 12 31 12 L 37 12 A 1.0001 1.0001 0 0 0 38 11 L 38 3.3457031 A 1.0001 1.0001 0 0 0 37.130859 2.3554688 C 36.247185 2.2382213 33.057174 2 30.140625 2 z M 30.140625 4 C 32.578477 4 34.935105 4.195047 36 4.2949219 L 36 10 L 31 10 C 28.802666 10 27 11.802666 27 14 L 27 19 A 1.0001 1.0001 0 0 0 28 20 L 35.867188 20 L 35.117188 26 L 28 26 A 1.0001 1.0001 0 0 0 27 27 L 27 46 L 21 46 L 21 27 A 1.0001 1.0001 0 0 0 20 26 L 14 26 L 14 20 L 20 20 A 1.0001 1.0001 0 0 0 21 19 L 21 13.367188 C 21 10.22255 21.920305 7.9269075 23.472656 6.3847656 C 25.025007 4.8426237 27.269875 4 30.140625 4 z"></path></svg></a>
-                        <a style="color: #fff;border:none;background: linear-gradient( 45deg ,#0C90FC 0%,#CB42C4 50%,  #F86474 100%)" class="mx-1 mt-2 btn px-1" href="fb-messenger://share/?link=https%3A%2F%2Fbiticonsbank.com%2F3966708785892226202305040806" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50" style=" fill:#fff;"><path d="M 25 2 C 12.300781 2 2 11.601563 2 23.5 C 2 29.800781 4.898438 35.699219 10 39.800781 L 10 48.601563 L 18.601563 44.101563 C 20.699219 44.699219 22.800781 44.898438 25 44.898438 C 37.699219 44.898438 48 35.300781 48 23.398438 C 48 11.601563 37.699219 2 25 2 Z M 27.300781 30.601563 L 21.5 24.398438 L 10.699219 30.5 L 22.699219 17.800781 L 28.601563 23.699219 L 39.101563 17.800781 Z"></path></svg></a>
-                        <a style="background:rgb(64, 195, 81);" class="mx-1 mt-2 btn px-1" href="whatsapp://send?text=NEW SITE%0ASign up get 10$%0ADAILY+3%25-7%25+Interest%0AMinimum Withdrawal $10%0A  https://biticonsbank.com/3966708785892226202305040806" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48" style=" fill:#000000;"><path fill="#fff" d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z"></path><path fill="#fff" d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z"></path><path fill="#cfd8dc" d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z"></path><path fill="#40c351" d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z"></path><path fill="#fff" fill-rule="evenodd" d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z" clip-rule="evenodd"></path></svg></a>
-                        <a style="background: #55acee;" class="mx-1 mt-2 btn px-1" href="https://twitter.com/intent/tweet?url=https://biticonsbank.com/3966708785892226202305040806&amp;text=biticonsbank.com NEW SITE%0ASign up get 10$%0ADAILY+3%25-7%25+Interest%0AMinimum Withdrawal $10%0A&amp;hashtags=SocialRebel,trend" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50" style=" fill:#fff;"><path d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z"></path></svg></a>
-                        <a style="background: rgb(41, 182, 246);" class="mx-1 mt-2 btn px-1" href="tg://msg?text=NEW SITE%0ASign up get 10$%0ADAILY+3%25-7%25+Interest%0AMinimum Withdrawal $10%0A  https://biticonsbank.com/3966708785892226202305040806" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 50 50" style=" fill:#fff;"><path d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z"></path></svg></a>
-                        <a style="background-color:rgb(0, 195, 0);" class="mx-1 mt-2 btn px-1" href="line://msg/text/NEW SITE%0ASign up get 10$%0ADAILY+3%25-7%25+Interest%0AMinimum Withdrawal $10%0A  https://biticonsbank.com/3966708785892226202305040806" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24" height="24" viewBox="0 0 48 48" style=" fill:#fff;"><path d="M25.12,44.521c-2.114,1.162-2.024-0.549-1.933-1.076c0.054-0.314,0.3-1.787,0.3-1.787c0.07-0.534,0.144-1.36-0.067-1.887 c-0.235-0.58-1.166-0.882-1.85-1.029C11.48,37.415,4.011,30.4,4.011,22.025c0-9.342,9.42-16.943,20.995-16.943S46,12.683,46,22.025 C46,32.517,34.872,39.159,25.12,44.521z M18.369,25.845c0-0.56-0.459-1.015-1.023-1.015h-2.856v-6.678 c0-0.56-0.459-1.015-1.023-1.015c-0.565,0-1.023,0.455-1.023,1.015v7.694c0,0.561,0.459,1.016,1.023,1.016h3.879 C17.91,26.863,18.369,26.406,18.369,25.845z M21.357,18.152c0-0.56-0.459-1.015-1.023-1.015c-0.565,0-1.023,0.455-1.023,1.015 v7.694c0,0.561,0.459,1.016,1.023,1.016c0.565,0,1.023-0.456,1.023-1.016V18.152z M30.697,18.152c0-0.56-0.459-1.015-1.023-1.015 c-0.565,0-1.025,0.455-1.025,1.015v4.761l-3.978-5.369c-0.192-0.254-0.499-0.406-0.818-0.406c-0.11,0-0.219,0.016-0.325,0.052 c-0.419,0.139-0.7,0.526-0.7,0.963v7.694c0,0.561,0.46,1.016,1.025,1.016c0.566,0,1.025-0.456,1.025-1.016v-4.759l3.976,5.369 c0.192,0.254,0.498,0.406,0.818,0.406c0.109,0,0.219-0.018,0.325-0.053c0.42-0.137,0.7-0.524,0.7-0.963V18.152z M36.975,20.984 h-2.856v-1.817h2.856c0.566,0,1.025-0.455,1.025-1.015c0-0.56-0.46-1.015-1.025-1.015h-3.879c-0.565,0-1.023,0.455-1.023,1.015 c0,0.001,0,0.001,0,0.003v3.842v0.001c0,0,0,0,0,0.001v3.845c0,0.561,0.46,1.016,1.023,1.016h3.879 c0.565,0,1.025-0.456,1.025-1.016c0-0.56-0.46-1.015-1.025-1.015h-2.856v-1.817h2.856c0.566,0,1.025-0.455,1.025-1.015 c0-0.561-0.46-1.016-1.025-1.016V20.984z"></path></svg></a>
-                    </div>
-                </div>
-
-                <div class="lg:col-span-3 lg:pl-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
-                    </svg>
-                    You can also copy the sharing link and send it to your friends                </div>
-
-                <div class="lg:col-span-3 lg:pl-8">
-
-                    <h2 class="text-black font-medium text-sm leading-none ml-9 mb-3">Click the link below to automatically copy</h2>
-                    <div class="max-w-xl flex items-center mb-8">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-4" viewBox="0 0 24 24" width="24" height="24">
-                            <path fill="none" d="M0 0h24v24H0z"></path>
-                            <path fill="currentColor" d="M13.06 8.11l1.415 1.415a7 7 0 0 1 0 9.9l-.354.353a7 7 0 0 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415 1.415-1.414zm6.718 6.011l-1.414-1.414a5 5 0 1 0-7.071-7.071l-.354.354a5 5 0 0 0 0 7.07l1.415 1.415-1.415 1.414-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 0 1 9.9 9.9z"></path>
-                        </svg>
-                        <input class="text-black text-sm block bg-white shadow-md rounded px-3 py-1.5 w-full placeholder-green" type="text" id="reflink" onclick="copyValue('reflink')" value="https://biticonsbank.com/3966708785892226202305040806" readonly=""></div>
-
-                </div>
-
-                <div class="lg:col-span-3 lg:pl-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
-                    </svg>
-                    Your commission share is calculated based on the amount invested by the invited user.                </div>
-
-                <div class="lg:col-span-3 lg:pl-8">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24" width="24" height="24">
-                        <path fill="none" d="M0 0h24v24H0z"></path>
-                        <path fill="currentColor" d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
-                    </svg>
-                    If your friend invests, you also get 5% of their investment for free. If they invite their friends too, you also get 2% of their friends. There is no upper limit.                </div>
-
-
-
-
             </div>
-            <!--            <h2 class="text-black font-bold text-2xl leading-none mt-16 mb-8">--><!--</h2>-->
-            <!--            <p class="leading-relaxed mb-6 max-w-xl">--><!--</p>-->
-            <!--            <div class="overflow-x-auto shadow-lg max-w-full w-full">-->
-            <!--                <table class="table-fixed w-248 lg:w-full text-gray text-sm">-->
-            <!--                    <tr class="text-left text-base text-white">-->
-            <!--                        <th class="bg-black font-medium px-4 py-2 rounded-l">--><!--Referred user</th>-->
-            <!--                        <th class="bg-black font-medium px-4 py-2">--><!--Mining power</th>-->
-            <!--                        <th class="bg-black font-medium px-4 py-2">--><!--Level</th>-->
-            <!--                        <th class="bg-black font-medium px-4 py-2">--><!--Commission</th>-->
-            <!--                        <th class="bg-black font-medium px-4 py-2 rounded-r">--><!--Time</th>-->
-            <!--                    </tr>-->
-            <!--                    <tr class="bg-white hover:bg-white-dark">-->
-            <!--                        <td class="px-4 border-b border-gray-light py-3">a**u</td>-->
-            <!--                        <td class="px-4 border-b border-gray-light py-3">0.00 KH/s</td>-->
-            <!--                        <td class="px-4 border-b border-gray-light py-3">7.00% (Level 1)</td>-->
-            <!--                        <td class="px-4 border-b border-gray-light py-3">-</td>-->
-            <!--                        <td class="px-4 border-b border-gray-light py-3 formatunix">1640151938</td>-->
-            <!--                    </tr>-->
-            <!--                </table>-->
-            <!--            </div>-->
-            <div class="text-center mt-6"></div>
+        </div>
+        <script async="" src="js_1"></script>
+        <script> window.dataLayer = window.dataLayer || [];
+
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+
+            gtag('js', new Date());
+            gtag('config', 'G-7X3CC5H5S2');
+
+
+        </script>
+    </header>
+    <style>
+        .btn {
+            border: none;
+            box-shadow: none;
+            font-weight: 500;
+            display: inline-block;
+            line-height: 1;
+            color: #6e6b7b;
+            text-align: center;
+            vertical-align: middle;
+            cursor: pointer;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            background-color: transparent;
+            padding: .786rem 1.5rem;
+            font-size: 1rem;
+            border-radius: .358rem;
+            transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out, background 0s, border 0s;
+        }
+    </style>
+    <div class="account-menu flex flex-row w-full">
+
+        <div id="accountMenu"
+            class="z-10 fixed h-full md:static hidden md:block w-56 md:w-72 bg-white py-14 px-3 md:px-8 shadow-2xl md:shadow-none">
+            <button id="closeAccountMenu"
+                class="inline-block absolute top-3 right-3 md:hidden p-1.5 p-2 rounded-sm hover:bg-white-dark text-black">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                    <path fill="none" d="M0 0h24v24H0z"></path>
+                    <path fill="currentColor"
+                        d="M12 10.586l4.95-4.95 1.414 1.414-4.95 4.95 4.95 4.95-1.414 1.414-4.95-4.95-4.95 4.95-1.414-1.414 4.95-4.95-4.95-4.95L7.05 5.636z">
+                    </path>
+                </svg>
+            </button>
+            <ul>
+                <li>
+                    <a class="flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "
+                        href="/dash.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="text-green mr-3" width="24"
+                            height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm-4.987-3.744A7.966 7.966 0 0 0 12 20c1.97 0 3.773-.712 5.167-1.892A6.979 6.979 0 0 0 12.16 16a6.981 6.981 0 0 0-5.147 2.256zM5.616 16.82A8.975 8.975 0 0 1 12.16 14a8.972 8.972 0 0 1 6.362 2.634 8 8 0 1 0-12.906.187zM12 13a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm0-2a2 2 0 1 0 0-4 2 2 0 0 0 0 4z">
+                            </path>
+                        </svg>
+                        Dashboard </a>
+                </li>
+                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "
+                        href="/invest.html">
+                        <svg class="text-green mr-3" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                            height="24" viewBox="0 0 128 128" style="fill: #26e07f;">
+                            <path
+                                d="M 24 1 C 11.32 1 1 11.32 1 24 L 1 84 C 1 96.68 11.32 107 24 107 L 78 107 C 79.66 107 81 105.66 81 104 C 81 102.34 79.66 101 78 101 L 24 101 C 14.63 101 7 93.37 7 84 L 7 47 L 121 47 L 121 66 C 121 67.66 122.34 69 124 69 C 125.66 69 127 67.66 127 66 L 127 24 C 127 11.32 116.68 1 104 1 L 24 1 z M 24 7 L 104 7 C 112.35 7 119.3007 13.05 120.7207 21 L 7.2792969 21 C 8.6992969 13.05 15.65 7 24 7 z M 7 27 L 121 27 L 121 41 L 7 41 L 7 27 z M 92 61 C 90.34 61 89 62.34 89 64 L 89 71 L 86 71 C 84.34 71 83 72.34 83 74 C 83 75.66 84.34 77 86 77 L 89 77 L 89 111 L 86 111 C 84.34 111 83 112.34 83 114 C 83 115.66 84.34 117 86 117 L 89 117 L 89 124 C 89 125.66 90.34 127 92 127 C 93.66 127 95 125.66 95 124 L 95 117 L 103 117 L 103 124 C 103 125.66 104.34 127 106 127 C 107.66 127 109 125.66 109 124 L 109 117 L 114 117 C 121.17 117 127 111.17 127 104 C 127 98.37 123.40062 93.589297 118.39062 91.779297 C 120.02062 89.609297 121 86.92 121 84 C 121 77.17 115.7 71.560781 109 71.050781 L 109 64 C 109 62.34 107.66 61 106 61 C 104.34 61 103 62.34 103 64 L 103 71 L 95 71 L 95 64 C 95 62.34 93.66 61 92 61 z M 95 77 L 108 77 C 111.86 77 115 80.14 115 84 C 115 87.86 111.86 91 108 91 L 95 91 L 95 77 z M 19 81 C 17.34 81 16 82.34 16 84 C 16 85.66 17.34 87 19 87 L 49 87 C 50.66 87 52 85.66 52 84 C 52 82.34 50.66 81 49 81 L 19 81 z M 69 81 C 67.34 81 66 82.34 66 84 C 66 85.66 67.34 87 69 87 L 79 87 C 80.66 87 82 85.66 82 84 C 82 82.34 80.66 81 79 81 L 69 81 z M 95 97 L 108 97 L 114 97 C 117.86 97 121 100.14 121 104 C 121 107.86 117.86 111 114 111 L 95 111 L 95 97 z">
+                            </path>
+                        </svg>
+                        Invest </a></li>
+                <!--<li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "-->
+                <!--       href="/manager.php">-->
+                <!--        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="text-green mr-3 bi inline-block bi-award-fill" viewBox="0 0 16 16"><path d="m8 0 1.669.864 1.858.282.842 1.68 1.337 1.32L13.4 6l.306 1.854-1.337 1.32-.842 1.68-1.858.282L8 12l-1.669-.864-1.858-.282-.842-1.68-1.337-1.32L2.6 6l-.306-1.854 1.337-1.32.842-1.68L6.331.864 8 0z"/><path d="M4 11.794V16l4-1 4 1v-4.206l-2.018.306L8 13.126 6.018 12.1 4 11.794z"/></svg>-->
+                <!--        account Manager </a></li>-->
+                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "
+                        href="/recharge.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24"
+                            height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M19.375 15.103A8.001 8.001 0 0 0 8.03 5.053l-.992-1.737A9.996 9.996 0 0 1 17 3.34c4.49 2.592 6.21 8.142 4.117 12.77l1.342.774-4.165 2.214-.165-4.714 1.246.719zM4.625 8.897a8.001 8.001 0 0 0 11.345 10.05l.992 1.737A9.996 9.996 0 0 1 7 20.66C2.51 18.068.79 12.518 2.883 7.89L1.54 7.117l4.165-2.214.165 4.714-1.246-.719zM8.5 14H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V7h2v1h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v1h-2v-1H8.5v-2z">
+                            </path>
+                        </svg>
+                        Withdraw </a></li>
+                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black text-black font-semibold"
+                        href="/referrals.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24"
+                            height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M14 14.252v2.09A6 6 0 0 0 6 22l-2-.001a8 8 0 0 1 10-7.748zM12 13c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm6 6v-3h2v3h3v2h-3v3h-2v-3h-3v-2h3z">
+                            </path>
+                        </svg>
+                        Earn commission </a></li>
+                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "
+                        href="/contact.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-green mr-3" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z">
+                            </path>
+                        </svg>
+                        Contact us </a></li>
+                <!--        <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black"-->
+                <!--               href="--><!--" target="_blank">-->
+                <!--                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3"  viewBox="0 0 24 24" width="24" height="24">-->
+                <!--                    <path fill="none" d="M0 0h24v24H0z"></path>-->
+                <!--                    <path fill="currentColor" d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"></path>-->
+                <!--                </svg>-->
+                <!--                --><!-- </a></li>-->
+                <li><a class="mt-2 flex items-center py-1.5 px-4 rounded-sm hover:bg-white-dark hover:text-black "
+                        href="/setting.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3" viewBox="0 0 24 24" width="24"
+                            height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M3.34 17a10.018 10.018 0 0 1-.978-2.326 3 3 0 0 0 .002-5.347A9.99 9.99 0 0 1 4.865 4.99a3 3 0 0 0 4.631-2.674 9.99 9.99 0 0 1 5.007.002 3 3 0 0 0 4.632 2.672c.579.59 1.093 1.261 1.525 2.01.433.749.757 1.53.978 2.326a3 3 0 0 0-.002 5.347 9.99 9.99 0 0 1-2.501 4.337 3 3 0 0 0-4.631 2.674 9.99 9.99 0 0 1-5.007-.002 3 3 0 0 0-4.632-2.672A10.018 10.018 0 0 1 3.34 17zm5.66.196a4.993 4.993 0 0 1 2.25 2.77c.499.047 1 .048 1.499.001A4.993 4.993 0 0 1 15 17.197a4.993 4.993 0 0 1 3.525-.565c.29-.408.54-.843.748-1.298A4.993 4.993 0 0 1 18 12c0-1.26.47-2.437 1.273-3.334a8.126 8.126 0 0 0-.75-1.298A4.993 4.993 0 0 1 15 6.804a4.993 4.993 0 0 1-2.25-2.77c-.499-.047-1-.048-1.499-.001A4.993 4.993 0 0 1 9 6.803a4.993 4.993 0 0 1-3.525.565 7.99 7.99 0 0 0-.748 1.298A4.993 4.993 0 0 1 6 12c0 1.26-.47 2.437-1.273 3.334a8.126 8.126 0 0 0 .75 1.298A4.993 4.993 0 0 1 9 17.196zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0-2a1 1 0 1 0 0-2 1 1 0 0 0 0 2z">
+                            </path>
+                        </svg>
+                        Settings </a></li>
+            </ul>
+        </div>
+        <script> function toggleAccountMenu() {
+                var accountMenu = document.getElementById('accountMenu');
+                accountMenu.classList.toggle('hidden');
+            }
+
+            var openAccountMenu = document.getElementById('openAccountMenu');
+            openAccountMenu.addEventListener('click', toggleAccountMenu);
+            var closeAccountMenu = document.getElementById('closeAccountMenu');
+            closeAccountMenu.addEventListener('click', toggleAccountMenu);</script>
+        <div class="flex-1 overflow-y-auto">
+            <div class="xl:container mx-auto py-4 md:py-14 px-4 md:px-8">
+                <h1 class="text-black font-bold text-3xl leading-none mb-6 pb-4 border-b-2 border-gray-light">
+                    Partnering</h1>
+                <h2 class="text-black font-bold text-2xl leading-relaxed mb-3">Share with your friends or others to earn
+                    commissions to level up your vip</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-4 mb-8">
+                    <div class="lg:col-span-2 mb-8">
+                        <div class="py-4 sm:py-6 pl-4 flex items-center bg-black rounded shadow-md">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3 flex-none"
+                                viewBox="0 0 24 24" width="32" height="32">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M13 9h8L11 24v-9H4l9-15v9zm-2 2V7.22L7.532 13H13v4.394L17.263 11H11z"></path>
+                            </svg>
+                            <div>
+                                <h2 class="text-green font-medium text-sm leading-none mb-1">Referral commission</h2>
+                                <div class="text-base sm:text-xl text-white font-semibold leading-none" id="pte"> 0NGN
+                                </div>
+                            </div>
+                        </div>
+                        <div class="py-4 sm:py-6 pl-4 border-b-2 border-gray-light flex justify-between items-center">
+                            <div class="flex items-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-3 flex-none"
+                                    viewBox="0 0 24 24" width="32" height="32">
+                                    <path fill="none" d="M0 0h24v24H0z"></path>
+                                    <path fill="currentColor"
+                                        d="M2 22a8 8 0 1 1 16 0h-2a6 6 0 1 0-12 0H2zm8-9c-3.315 0-6-2.685-6-6s2.685-6 6-6 6 2.685 6 6-2.685 6-6 6zm0-2c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm8.284 3.703A8.002 8.002 0 0 1 23 22h-2a6.001 6.001 0 0 0-3.537-5.473l.82-1.824zm-.688-11.29A5.5 5.5 0 0 1 21 8.5a5.499 5.499 0 0 1-5 5.478v-2.013a3.5 3.5 0 0 0 1.041-6.609l.555-1.943z">
+                                    </path>
+                                </svg>
+                                <div style="text-align:left;">
+                                    <h2 class="text-black font-medium text-sm leading-none mb-1">Referrals</h2>
+                                    <div class="text-base sm:text-xl text-green-dark font-semibold leading-none" id="referrals"> 0
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="ml-9 submit bg-black text-white hover:bg-black-dark rounded py-1.5 px-5"
+                                type="button" onclick="location.href='refuser.php'"> help and earn </div>
+
+
+                        </div>
+                    </div>
+
+
+                    <div class="lg:col-span-3 lg:pl-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24"
+                            width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                        </svg>
+                        Choose to click on the application icon below to send to your friends
+                    </div>
+
+                    <div class="lg:col-span-3 lg:pl-8">
+                        <div class="mt-2 flex justify-center f-wrap">
+                            <a style="background: rgb(3, 155, 228);" class="mx-1 mt-2 btn px-1"
+                                href="https://www.facebook.com/sharer/sharer.php?u=https://biticonsbank.com/3966708785892226202305040806&amp;quote=NEW SITE%0ASign up get 10$%0ADAILY+3%25-7%25+Interest%0AMinimum Withdrawal $10%0A"
+                                target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                                    height="24" viewBox="0 0 50 50" style=" fill:#fff;">
+                                    <path
+                                        d="M 30.140625 2 C 26.870375 2 24.045399 2.9969388 22.0625 4.9667969 C 20.079601 6.936655 19 9.823825 19 13.367188 L 19 18 L 13 18 A 1.0001 1.0001 0 0 0 12 19 L 12 27 A 1.0001 1.0001 0 0 0 13 28 L 19 28 L 19 47 A 1.0001 1.0001 0 0 0 20 48 L 28 48 A 1.0001 1.0001 0 0 0 29 47 L 29 28 L 36 28 A 1.0001 1.0001 0 0 0 36.992188 27.125 L 37.992188 19.125 A 1.0001 1.0001 0 0 0 37 18 L 29 18 L 29 14 C 29 12.883334 29.883334 12 31 12 L 37 12 A 1.0001 1.0001 0 0 0 38 11 L 38 3.3457031 A 1.0001 1.0001 0 0 0 37.130859 2.3554688 C 36.247185 2.2382213 33.057174 2 30.140625 2 z M 30.140625 4 C 32.578477 4 34.935105 4.195047 36 4.2949219 L 36 10 L 31 10 C 28.802666 10 27 11.802666 27 14 L 27 19 A 1.0001 1.0001 0 0 0 28 20 L 35.867188 20 L 35.117188 26 L 28 26 A 1.0001 1.0001 0 0 0 27 27 L 27 46 L 21 46 L 21 27 A 1.0001 1.0001 0 0 0 20 26 L 14 26 L 14 20 L 20 20 A 1.0001 1.0001 0 0 0 21 19 L 21 13.367188 C 21 10.22255 21.920305 7.9269075 23.472656 6.3847656 C 25.025007 4.8426237 27.269875 4 30.140625 4 z">
+                                    </path>
+                                </svg></a>
+                            <a style="color: #fff;border:none;background: linear-gradient( 45deg ,#0C90FC 0%,#CB42C4 50%,  #F86474 100%)"
+                                class="mx-1 mt-2 btn px-1"
+                                href="fb-messenger://share/?link=https%3A%2F%2Fbiticonsbank.com%2F3966708785892226202305040806"
+                                target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                                    height="24" viewBox="0 0 50 50" style=" fill:#fff;">
+                                    <path
+                                        d="M 25 2 C 12.300781 2 2 11.601563 2 23.5 C 2 29.800781 4.898438 35.699219 10 39.800781 L 10 48.601563 L 18.601563 44.101563 C 20.699219 44.699219 22.800781 44.898438 25 44.898438 C 37.699219 44.898438 48 35.300781 48 23.398438 C 48 11.601563 37.699219 2 25 2 Z M 27.300781 30.601563 L 21.5 24.398438 L 10.699219 30.5 L 22.699219 17.800781 L 28.601563 23.699219 L 39.101563 17.800781 Z">
+                                    </path>
+                                </svg></a>
+                            <a style="background:rgb(64, 195, 81);" class="mx-1 mt-2 btn px-1"
+                                href="whatsapp://send?text=NEW SITE%0ASign up get 10$%0ADAILY+3%25-7%25+Interest%0AMinimum Withdrawal $10%0A  https://biticonsbank.com/3966708785892226202305040806"
+                                target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                                    height="24" viewBox="0 0 48 48" style=" fill:#000000;">
+                                    <path fill="#fff"
+                                        d="M4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5c5.1,0,9.8,2,13.4,5.6	C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19c0,0,0,0,0,0h0c-3.2,0-6.3-0.8-9.1-2.3L4.9,43.3z">
+                                    </path>
+                                    <path fill="#fff"
+                                        d="M4.9,43.8c-0.1,0-0.3-0.1-0.4-0.1c-0.1-0.1-0.2-0.3-0.1-0.5L7,33.5c-1.6-2.9-2.5-6.2-2.5-9.6	C4.5,13.2,13.3,4.5,24,4.5c5.2,0,10.1,2,13.8,5.7c3.7,3.7,5.7,8.6,5.7,13.8c0,10.7-8.7,19.5-19.5,19.5c-3.2,0-6.3-0.8-9.1-2.3	L5,43.8C5,43.8,4.9,43.8,4.9,43.8z">
+                                    </path>
+                                    <path fill="#cfd8dc"
+                                        d="M24,5c5.1,0,9.8,2,13.4,5.6C41,14.2,43,18.9,43,24c0,10.5-8.5,19-19,19h0c-3.2,0-6.3-0.8-9.1-2.3	L4.9,43.3l2.7-9.8C5.9,30.6,5,27.3,5,24C5,13.5,13.5,5,24,5 M24,43L24,43L24,43 M24,43L24,43L24,43 M24,4L24,4C13,4,4,13,4,24	c0,3.4,0.8,6.7,2.5,9.6L3.9,43c-0.1,0.3,0,0.7,0.3,1c0.2,0.2,0.4,0.3,0.7,0.3c0.1,0,0.2,0,0.3,0l9.7-2.5c2.8,1.5,6,2.2,9.2,2.2	c11,0,20-9,20-20c0-5.3-2.1-10.4-5.8-14.1C34.4,6.1,29.4,4,24,4L24,4z">
+                                    </path>
+                                    <path fill="#40c351"
+                                        d="M35.2,12.8c-3-3-6.9-4.6-11.2-4.6C15.3,8.2,8.2,15.3,8.2,24c0,3,0.8,5.9,2.4,8.4L11,33l-1.6,5.8	l6-1.6l0.6,0.3c2.4,1.4,5.2,2.2,8,2.2h0c8.7,0,15.8-7.1,15.8-15.8C39.8,19.8,38.2,15.8,35.2,12.8z">
+                                    </path>
+                                    <path fill="#fff" fill-rule="evenodd"
+                                        d="M19.3,16c-0.4-0.8-0.7-0.8-1.1-0.8c-0.3,0-0.6,0-0.9,0	s-0.8,0.1-1.3,0.6c-0.4,0.5-1.7,1.6-1.7,4s1.7,4.6,1.9,4.9s3.3,5.3,8.1,7.2c4,1.6,4.8,1.3,5.7,1.2c0.9-0.1,2.8-1.1,3.2-2.3	c0.4-1.1,0.4-2.1,0.3-2.3c-0.1-0.2-0.4-0.3-0.9-0.6s-2.8-1.4-3.2-1.5c-0.4-0.2-0.8-0.2-1.1,0.2c-0.3,0.5-1.2,1.5-1.5,1.9	c-0.3,0.3-0.6,0.4-1,0.1c-0.5-0.2-2-0.7-3.8-2.4c-1.4-1.3-2.4-2.8-2.6-3.3c-0.3-0.5,0-0.7,0.2-1c0.2-0.2,0.5-0.6,0.7-0.8	c0.2-0.3,0.3-0.5,0.5-0.8c0.2-0.3,0.1-0.6,0-0.8C20.6,19.3,19.7,17,19.3,16z"
+                                        clip-rule="evenodd"></path>
+                                </svg></a>
+                            <a style="background: #55acee;" class="mx-1 mt-2 btn px-1"
+                                href="https://twitter.com/intent/tweet?url=https://biticonsbank.com/3966708785892226202305040806&amp;text=biticonsbank.com NEW SITE%0ASign up get 10$%0ADAILY+3%25-7%25+Interest%0AMinimum Withdrawal $10%0A&amp;hashtags=SocialRebel,trend"
+                                target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                                    height="24" viewBox="0 0 50 50" style=" fill:#fff;">
+                                    <path
+                                        d="M 50.0625 10.4375 C 48.214844 11.257813 46.234375 11.808594 44.152344 12.058594 C 46.277344 10.785156 47.910156 8.769531 48.675781 6.371094 C 46.691406 7.546875 44.484375 8.402344 42.144531 8.863281 C 40.269531 6.863281 37.597656 5.617188 34.640625 5.617188 C 28.960938 5.617188 24.355469 10.21875 24.355469 15.898438 C 24.355469 16.703125 24.449219 17.488281 24.625 18.242188 C 16.078125 17.8125 8.503906 13.71875 3.429688 7.496094 C 2.542969 9.019531 2.039063 10.785156 2.039063 12.667969 C 2.039063 16.234375 3.851563 19.382813 6.613281 21.230469 C 4.925781 21.175781 3.339844 20.710938 1.953125 19.941406 C 1.953125 19.984375 1.953125 20.027344 1.953125 20.070313 C 1.953125 25.054688 5.5 29.207031 10.199219 30.15625 C 9.339844 30.390625 8.429688 30.515625 7.492188 30.515625 C 6.828125 30.515625 6.183594 30.453125 5.554688 30.328125 C 6.867188 34.410156 10.664063 37.390625 15.160156 37.472656 C 11.644531 40.230469 7.210938 41.871094 2.390625 41.871094 C 1.558594 41.871094 0.742188 41.824219 -0.0585938 41.726563 C 4.488281 44.648438 9.894531 46.347656 15.703125 46.347656 C 34.617188 46.347656 44.960938 30.679688 44.960938 17.09375 C 44.960938 16.648438 44.949219 16.199219 44.933594 15.761719 C 46.941406 14.3125 48.683594 12.5 50.0625 10.4375 Z">
+                                    </path>
+                                </svg></a>
+                            <a style="background: rgb(41, 182, 246);" class="mx-1 mt-2 btn px-1"
+                                href="tg://msg?text=NEW SITE%0ASign up get 10$%0ADAILY+3%25-7%25+Interest%0AMinimum Withdrawal $10%0A  https://biticonsbank.com/3966708785892226202305040806"
+                                target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                                    height="24" viewBox="0 0 50 50" style=" fill:#fff;">
+                                    <path
+                                        d="M46.137,6.552c-0.75-0.636-1.928-0.727-3.146-0.238l-0.002,0C41.708,6.828,6.728,21.832,5.304,22.445	c-0.259,0.09-2.521,0.934-2.288,2.814c0.208,1.695,2.026,2.397,2.248,2.478l8.893,3.045c0.59,1.964,2.765,9.21,3.246,10.758	c0.3,0.965,0.789,2.233,1.646,2.494c0.752,0.29,1.5,0.025,1.984-0.355l5.437-5.043l8.777,6.845l0.209,0.125	c0.596,0.264,1.167,0.396,1.712,0.396c0.421,0,0.825-0.079,1.211-0.237c1.315-0.54,1.841-1.793,1.896-1.935l6.556-34.077	C47.231,7.933,46.675,7.007,46.137,6.552z M22,32l-3,8l-3-10l23-17L22,32z">
+                                    </path>
+                                </svg></a>
+                            <a style="background-color:rgb(0, 195, 0);" class="mx-1 mt-2 btn px-1"
+                                href="line://msg/text/NEW SITE%0ASign up get 10$%0ADAILY+3%25-7%25+Interest%0AMinimum Withdrawal $10%0A  https://biticonsbank.com/3966708785892226202305040806"
+                                target="_blank"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="24"
+                                    height="24" viewBox="0 0 48 48" style=" fill:#fff;">
+                                    <path
+                                        d="M25.12,44.521c-2.114,1.162-2.024-0.549-1.933-1.076c0.054-0.314,0.3-1.787,0.3-1.787c0.07-0.534,0.144-1.36-0.067-1.887 c-0.235-0.58-1.166-0.882-1.85-1.029C11.48,37.415,4.011,30.4,4.011,22.025c0-9.342,9.42-16.943,20.995-16.943S46,12.683,46,22.025 C46,32.517,34.872,39.159,25.12,44.521z M18.369,25.845c0-0.56-0.459-1.015-1.023-1.015h-2.856v-6.678 c0-0.56-0.459-1.015-1.023-1.015c-0.565,0-1.023,0.455-1.023,1.015v7.694c0,0.561,0.459,1.016,1.023,1.016h3.879 C17.91,26.863,18.369,26.406,18.369,25.845z M21.357,18.152c0-0.56-0.459-1.015-1.023-1.015c-0.565,0-1.023,0.455-1.023,1.015 v7.694c0,0.561,0.459,1.016,1.023,1.016c0.565,0,1.023-0.456,1.023-1.016V18.152z M30.697,18.152c0-0.56-0.459-1.015-1.023-1.015 c-0.565,0-1.025,0.455-1.025,1.015v4.761l-3.978-5.369c-0.192-0.254-0.499-0.406-0.818-0.406c-0.11,0-0.219,0.016-0.325,0.052 c-0.419,0.139-0.7,0.526-0.7,0.963v7.694c0,0.561,0.46,1.016,1.025,1.016c0.566,0,1.025-0.456,1.025-1.016v-4.759l3.976,5.369 c0.192,0.254,0.498,0.406,0.818,0.406c0.109,0,0.219-0.018,0.325-0.053c0.42-0.137,0.7-0.524,0.7-0.963V18.152z M36.975,20.984 h-2.856v-1.817h2.856c0.566,0,1.025-0.455,1.025-1.015c0-0.56-0.46-1.015-1.025-1.015h-3.879c-0.565,0-1.023,0.455-1.023,1.015 c0,0.001,0,0.001,0,0.003v3.842v0.001c0,0,0,0,0,0.001v3.845c0,0.561,0.46,1.016,1.023,1.016h3.879 c0.565,0,1.025-0.456,1.025-1.016c0-0.56-0.46-1.015-1.025-1.015h-2.856v-1.817h2.856c0.566,0,1.025-0.455,1.025-1.015 c0-0.561-0.46-1.016-1.025-1.016V20.984z">
+                                    </path>
+                                </svg></a>
+                        </div>
+                    </div>
+
+                    <div class="lg:col-span-3 lg:pl-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24"
+                            width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                        </svg>
+                        You can also copy the sharing link and send it to your friends
+                    </div>
+
+                    <div class="lg:col-span-3 lg:pl-8">
+
+                        <h2 class="text-black font-medium text-sm leading-none ml-9 mb-3">Click the link below to
+                            automatically copy</h2>
+                        <div class="max-w-xl flex items-center mb-8">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="text-green mr-4" viewBox="0 0 24 24"
+                                width="24" height="24">
+                                <path fill="none" d="M0 0h24v24H0z"></path>
+                                <path fill="currentColor"
+                                    d="M13.06 8.11l1.415 1.415a7 7 0 0 1 0 9.9l-.354.353a7 7 0 0 1-9.9-9.9l1.415 1.415a5 5 0 1 0 7.071 7.071l.354-.354a5 5 0 0 0 0-7.07l-1.415-1.415 1.415-1.414zm6.718 6.011l-1.414-1.414a5 5 0 1 0-7.071-7.071l-.354.354a5 5 0 0 0 0 7.07l1.415 1.415-1.415 1.414-1.414-1.414a7 7 0 0 1 0-9.9l.354-.353a7 7 0 0 1 9.9 9.9z">
+                                </path>
+                            </svg>
+                            <input
+                                class="text-black text-sm block bg-white shadow-md rounded px-3 py-1.5 w-full placeholder-green"
+                                type="text" id="reflink" onclick="copyValue('reflink')"
+                                value="" readonly="">
+                        </div>
+
+                    </div>
+
+                    <div class="lg:col-span-3 lg:pl-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24"
+                            width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                        </svg>
+                        Your commission share is calculated based on the amount invested by the invited user.
+                    </div>
+
+                    <div class="lg:col-span-3 lg:pl-8">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="text-green inline-block mr-2" viewBox="0 0 24 24"
+                            width="24" height="24">
+                            <path fill="none" d="M0 0h24v24H0z"></path>
+                            <path fill="currentColor"
+                                d="M10 15.172l9.192-9.193 1.415 1.414L10 18l-6.364-6.364 1.414-1.414z"></path>
+                        </svg>
+                        If your friend invests, you also get 5% of their investment for free. If they invite their
+                        friends too, you also get 2% of their friends. There is no upper limit.
+                    </div>
+
+
+
+
+                </div>
+                <!--            <h2 class="text-black font-bold text-2xl leading-none mt-16 mb-8">--><!--</h2>-->
+                <!--            <p class="leading-relaxed mb-6 max-w-xl">--><!--</p>-->
+                <!--            <div class="overflow-x-auto shadow-lg max-w-full w-full">-->
+                <!--                <table class="table-fixed w-248 lg:w-full text-gray text-sm">-->
+                <!--                    <tr class="text-left text-base text-white">-->
+                <!--                        <th class="bg-black font-medium px-4 py-2 rounded-l">--><!--Referred user</th>-->
+                <!--                        <th class="bg-black font-medium px-4 py-2">--><!--Mining power</th>-->
+                <!--                        <th class="bg-black font-medium px-4 py-2">--><!--Level</th>-->
+                <!--                        <th class="bg-black font-medium px-4 py-2">--><!--Commission</th>-->
+                <!--                        <th class="bg-black font-medium px-4 py-2 rounded-r">--><!--Time</th>-->
+                <!--                    </tr>-->
+                <!--                    <tr class="bg-white hover:bg-white-dark">-->
+                <!--                        <td class="px-4 border-b border-gray-light py-3">a**u</td>-->
+                <!--                        <td class="px-4 border-b border-gray-light py-3">0.00 KH/s</td>-->
+                <!--                        <td class="px-4 border-b border-gray-light py-3">7.00% (Level 1)</td>-->
+                <!--                        <td class="px-4 border-b border-gray-light py-3">-</td>-->
+                <!--                        <td class="px-4 border-b border-gray-light py-3 formatunix">1640151938</td>-->
+                <!--                    </tr>-->
+                <!--                </table>-->
+                <!--            </div>-->
+                <div class="text-center mt-6"></div>
+            </div>
         </div>
     </div>
-</div>
 
-<script src="js/script.js" async=""></script>
-<script>(function(){var js = "window['__CF$cv$params']={r:'7c1c7ecb5c591c93',m:'e5zdhGohA1.YyKz3zL9L1aYzzxxtmBpF5aingf.D1ZY-1683158760-0-ASLRr1iTIQh9FlXMAnB7qE76Mmg3Vqyru3eZ7N7t2tj0',u:'/cdn-cgi/challenge-platform/h/g'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);";var _0xh = document.createElement('iframe');_0xh.height = 1;_0xh.width = 1;_0xh.style.position = 'absolute';_0xh.style.top = 0;_0xh.style.left = 0;_0xh.style.border = 'none';_0xh.style.visibility = 'hidden';document.body.appendChild(_0xh);function handler() {var _0xi = _0xh.contentDocument || _0xh.contentWindow.document;if (_0xi) {var _0xj = _0xi.createElement('script');_0xj.nonce = '';_0xj.innerHTML = js;_0xi.getElementsByTagName('head')[0].appendChild(_0xj);}}if (document.readyState !== 'loading') {handler();} else if (window.addEventListener) {document.addEventListener('DOMContentLoaded', handler);} else {var prev = document.onreadystatechange || function () {};document.onreadystatechange = function (e) {prev(e);if (document.readyState !== 'loading') {document.onreadystatechange = prev;handler();}};}})();</script>
+    <script src="js/script.js" async=""></script>
+    <script src="/data.js"></script>
+    <script>(function () { var js = "window['__CF$cv$params']={r:'7c1c7ecb5c591c93',m:'e5zdhGohA1.YyKz3zL9L1aYzzxxtmBpF5aingf.D1ZY-1683158760-0-ASLRr1iTIQh9FlXMAnB7qE76Mmg3Vqyru3eZ7N7t2tj0',u:'/cdn-cgi/challenge-platform/h/g'};_cpo=document.createElement('script');_cpo.nonce='',_cpo.src='/cdn-cgi/challenge-platform/scripts/invisible.js',document.getElementsByTagName('head')[0].appendChild(_cpo);"; var _0xh = document.createElement('iframe'); _0xh.height = 1; _0xh.width = 1; _0xh.style.position = 'absolute'; _0xh.style.top = 0; _0xh.style.left = 0; _0xh.style.border = 'none'; _0xh.style.visibility = 'hidden'; document.body.appendChild(_0xh); function handler() { var _0xi = _0xh.contentDocument || _0xh.contentWindow.document; if (_0xi) { var _0xj = _0xi.createElement('script'); _0xj.nonce = ''; _0xj.innerHTML = js; _0xi.getElementsByTagName('head')[0].appendChild(_0xj); } } if (document.readyState !== 'loading') { handler(); } else if (window.addEventListener) { document.addEventListener('DOMContentLoaded', handler); } else { var prev = document.onreadystatechange || function () { }; document.onreadystatechange = function (e) { prev(e); if (document.readyState !== 'loading') { document.onreadystatechange = prev; handler(); } }; } })();</script>
 
 
-<script>
-    function copyValue(id) {
-        var copy = document.getElementById(id)
-        copy.select()
-        document.execCommand('copy')
-        createAlert('cc',"Copy successfully")
-    }
-</script></body></html>
+    <script>
+        function copyValue(id) {
+            var copy = document.getElementById(id)
+            copy.select()
+            document.execCommand('copy')
+            createAlert('cc', "Copy successfully")
+        }
+    </script>
+</body>
+
+</html>

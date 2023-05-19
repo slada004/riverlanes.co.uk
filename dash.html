@@ -441,7 +441,7 @@
                         </div>
                         <div class="ml-3">
                             <span class="text-black font-medium leading-none">Hello</span>
-                            <span class="mx-4 text-black text-xl mb-2 font-medium leading-none">Emmanuel</a></span>
+                            <span class="mx-4 text-black text-xl mb-2 font-medium leading-none" id="user-name">Loading...</a></span>
 
                             <h2 class="mt-1 text-warn font-medium leading-none">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -453,7 +453,7 @@
                                 </svg>
                                 VIP 1
                             </h2>
-                            <h2 class="text-black mt-1">Balance Amount : <b>NGN30,000</b></h2>
+                            <h2 class="text-black mt-1">Balance Amount : <b id="balance">NGN30,000</b></h2>
                             <!-- <h2>(4116 �)</h2> -->
                         </div>
                     </div>
@@ -506,7 +506,7 @@
                             <div>
                                 <h2 class="text-green font-medium text-sm leading-none mb-1">Potential Earnings</h2>
                                 <div class="text-base sm:text-xl text-white font-semibold leading-none">
-                                    NGN120,000
+                                    <p id="pte">NGN0</p>
                                 </div>
                             </div>
                         </div>
@@ -521,7 +521,7 @@
                             <div>
                                 <h2 class="text-black font-medium text-sm leading-none mb-1">Total Referred Users</h2>
                                 <div class="text-base sm:text-xl text-green-dark font-semibold leading-none">
-                                    4
+                                    <p id="referrals">4</p>
                                 </div>
                             </div>
                             <!--                        <a href="/top.html" class="ml-4 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">-->
@@ -604,7 +604,7 @@
                             <input id="reflink"
                                 class="text-black block bg-white shadow-md rounded px-3 py-1.5 w-full placeholder-green"
                                 type="text" onclick="copyValue('reflink')"
-                                value="https://biticonsbank.com/3966708785892226202304251559" readonly="">
+                                value="" readonly="">
                         </div>
                         <a href="/referrals.html"
                             class="mt-3 mb-8 ml-9 bg-black text-white hover:bg-black-dark rounded py-1.5 px-5 inline-flex items-center justify-center">
@@ -919,6 +919,7 @@
             })
 
         </script>
+        <script src="./data.js"></script>
         <script src="js/jquery.min.js" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="css/toastr.min.css">
         <link rel="stylesheet" href="css/ext-component-toastr.css">
