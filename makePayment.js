@@ -14,7 +14,7 @@ function makePayment() {
         customizations: {
             title: "Golden Recharge Investment",
             description: "Payment for GRI",
-            logo: "http://localhost:5500/images/GRI.png",
+            logo: "https://goldenrechargeinvestment.com/images/GRI.png",
         },
     });
 }
