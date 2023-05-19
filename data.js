@@ -6,7 +6,7 @@ async function data () {
     const reflink = document.getElementById('reflink');
 
 
-    const url = 'http://localhost:5000/api/user/';
+    const url = 'https://jwhite.onrender.com/api/user/';
 
     const req = await fetch(url, {
         method: 'GET',

@@ -2,7 +2,7 @@ async function verifyAccountNumber() {
     const accountNumber = document.getElementById('accountNumber').value;
     const bank = document.getElementById('bank').value;
 
-    const url = 'http://localhost:5000/api/user/bank-verification';
+    const url = 'https://jwhite.onrender.com/api/user/bank-verification';
     const data = {
         accountNumber,
         bank,
@@ -37,7 +37,7 @@ async function transfer() {
         bank,
     }
 
-    const url = 'http://localhost:5000/api/user/withdraw';
+    const url = 'https://jwhite.onrender.com/api/user/withdraw';
 
     const req = await fetch(url, {
         method: 'POST',

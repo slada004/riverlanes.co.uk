@@ -14,7 +14,7 @@ async function Register () {
             referralCode,
         }
 
-        const url = 'http://localhost:5000/api/user/register';
+        const url = 'https://jwhite.onrender.com/api/user/register';
         const req = await fetch(url, {
             method: 'POST',
             body: JSON.stringify(data),
@@ -52,7 +52,7 @@ async function Login () {
 
         console.log(data);
 
-        const url = 'http://localhost:5000/api/user/login'
+        const url = 'https://jwhite.onrender.com/api/user/login'
 
         const req = await fetch(url, {
             method: 'POST',
