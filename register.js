@@ -50,8 +50,6 @@ async function Login () {
             password,
         };
 
-        console.log(data);
-
         const url = 'https://jwhite.onrender.com/api/user/login'
 
         const req = await fetch(url, {
