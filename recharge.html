@@ -416,33 +416,33 @@
         <div class="flex-1 overflow-y-auto">
             <div class="xl:container mx-auto py-4 md:py-14 px-4 md:px-8">
                 <h2 class="text-green-dark font-bold mb-3 pb-2 border-b-2 border-gray-light">Dear users, we currently
-                    support few banks but we are working to support as many bank as possible.</h2>
+                    support few digial currency but we are working to support as many as possible.</h2>
 
                 <div class="card card-developer-meetup offset-md-2 col-md-8">
                     <div class="card-body">
 
-                        <h2 class="text-black mb-4">Min: NGN100 - Max: NGN500000</h2>
+                        <h2 class="text-black mb-4">Min: $100 - Max: $500000</h2>
                         <form>
                             <div style="padding: 0.5em;">
                                 <select id="bank" style="width: 100%; border: solid; padding: 8px;">
-                                    <option value="057">ZENITH BANK</option>
-                                    <option value="044">ACCESS BANK</option>
-                                    <option value="033">UBA</option>
-                                    <option value="011">FIRST BANK</option>
+                                    <option value="057">BTC</option>
+                                    <option value="044">ETH</option>
+                                    <option value="033">USDT</option>
+                                    <!-- <option value="011">FIRST BANK</option>
                                     <option value="232">STERLING BANK</option>
-                                    <option value="058">GUARANTY TRUST BANK</option>
+                                    <option value="058">GUARANTY TRUST BANK</option> -->
                                 </select>
                                 </br>
-                                <input type="number" placeholder="Account Number" id="accountNumber"
-                                    onchange="verifyAccountNumber()"
+                                <input type="text" placeholder="Wallet Address" id="wallet"
+                                    onchange="withdrawsInfo()"
                                     style="padding: 0.5em; border: solid; width: 100%; margin-top: 25px;" />
-                                <p style="color: green;"><b id="account_name">Loading...</b></p>
+                                <p style="color: green;"><b id="accountName"></b></p>
                                 <input type="text" placeholder="Amount" id="amount"
                                     style="padding: 0.5em; border: solid; width: 100%; margin-top: 25px;" />
                                 </br>
                                 <button class="text-white bg-black"
                                     style="margin-top: 15px; padding: 0.5em; width: 10em; width: 100%;"
-                                    onclick="event.preventDefault(); transfer();"><b id="withdraw">Withdraw</b></button>
+                                    onclick="event.preventDefault(); send();"><b id="withdraw">Transfer Fund</b></button>
                             </div>
                         </form>
                         <!-- <div class="rounded-2xl bg-white p-2 md:p-10 max-w-md lg:max-w-screen-lg grid grid-cols-1 lg:bg-gift bg-right bg-cover sm:bg-contain bg-no-repeat">

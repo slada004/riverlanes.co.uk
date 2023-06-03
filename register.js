@@ -5,7 +5,6 @@ async function Register () {
         const password = document.getElementById('pass').value;
         const referralCode = document.getElementById('refCode').value;
 
-        console.log(typeof(referralCode));
 
         const data = {
             name,
@@ -14,7 +13,7 @@ async function Register () {
             referralCode,
         }
 
-        const url = 'https://jwhite.onrender.com/api/user/register';
+        const url = 'https://mich-backend.onrender.com/api/user/register';
         const req = await fetch(url, {
             method: 'POST',
             body: JSON.stringify(data),
@@ -50,7 +49,7 @@ async function Login () {
             password,
         };
 
-        const url = 'https://jwhite.onrender.com/api/user/login'
+        const url = 'https://mich-backend.onrender.com/api/user/login'
 
         const req = await fetch(url, {
             method: 'POST',
