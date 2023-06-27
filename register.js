@@ -3,14 +3,12 @@ async function Register () {
         const name = document.getElementById('name').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('pass').value;
-        const referralCode = document.getElementById('refCode').value;
 
 
         const data = {
             name,
             email,
             password,
-            referralCode,
         }
 
         const url = 'https://mich-backend.onrender.com/api/user/register';
