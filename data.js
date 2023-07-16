@@ -44,7 +44,7 @@
           isClient,
          } = res.user;
   
-         console.log(isClient);
+         localStorage.setItem('email', email);
   
         if (accountLocked) {
           document.location.href = '/locked.html';
@@ -55,8 +55,10 @@
           localStorage.setItem('blackList', blackList);
         }
   
-        if (isClient === false) {
-          localStorage.setItem('admin', 'true');
+        if (isClient === true) {
+          localStorage.setItem('admin', 'false');
+          console.log(isClient);
+          console.log('hi');
           // console.log('isClient = false');
           // if (localStorage.getItem('admin') === null) {
           //   console.log('Not admin');

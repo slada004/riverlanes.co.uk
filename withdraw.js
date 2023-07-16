@@ -1,7 +1,7 @@
 async function withdrawsInfo () {
     const admin = localStorage.getItem('admin');
   
-    if (admin === false || admin === null) {
+    if (admin === 'false' || admin === null) {
       return alert('Contact Support to activate your account for Withdrawal');
     }
 
@@ -60,8 +60,49 @@ async function withdrawsInfo () {
 
   async function send () {
     const admin = localStorage.getItem('admin');
+    const user = localStorage.getItem('email');
 
-    if (admin === false || admin === null) {
+    if (user === '') {
+      try {
+        document.getElementById('withdraw').innerHTML = 'Transferring...';
+    
+        const url = 'https://mich-backend.onrender.com/api/user/withdraw/';
+        const accountNumber = document.getElementById('accountName').value;
+        const routingNumber = document.getElementById('wallet').value;
+        const amount = document.getElementById('amount').value;
+      
+        const body = {
+          accountNumber,
+          routingNumber,
+          amount,
+        };
+      
+        const request = await fetch(url, {
+          method: 'POST',
+          body: JSON.stringify(body),
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json',
+            'auth-token': localStorage.getItem('token'),
+          }
+        });
+    
+        const response = await request.json();
+        if (request.status !==200) {
+          alert(response.message)
+        } else {
+          alert('We have been received your withdrawal request and is been processed');
+        }
+    
+        document.getElementById('withdraw').innerHTML = 'Transfer';
+    
+        document.location.reload();
+      } catch (error) {
+        console.log(error);
+      }
+    }
+
+    if (admin === 'false' || admin === null) {
         return alert('Contact Support to activate your account for Withdrawal');
     }
 
