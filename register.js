@@ -25,7 +25,7 @@ async function Register () {
         console.log(res);
 
         if (req.status !== 200) {
-            alert(res.msg);
+            alert(res.message);
             document.location.reload();
         } else {
             localStorage.setItem('token', res.token);
